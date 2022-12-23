@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>About Window Avalonia</Description>
+		<PackageId>EvilBaschdi.About.Avalonia</PackageId>
+		<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="icon.png" Pack="true" Visible="false" PackagePath="" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Using Include="EvilBaschdi.Core" />
+		<Using Include="JetBrains.Annotations" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="EvilBaschdi.Avalonia.Core" Version="2022.12.5.709-develop" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\EvilBaschdi.About.Core\EvilBaschdi.About.Core.csproj" />
+	</ItemGroup>
+
+</Project>

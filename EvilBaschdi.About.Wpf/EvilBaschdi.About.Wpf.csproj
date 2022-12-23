@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>About Window WPF</Description>
+		<PackageId>EvilBaschdi.About.WPF</PackageId>
+		<TargetFrameworks>net6.0-windows;net7.0-windows</TargetFrameworks>
+		<UseWPF>true</UseWPF>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\EvilBaschdi.About.Core\EvilBaschdi.About.Core.csproj" />
+	</ItemGroup>
+
+</Project>
