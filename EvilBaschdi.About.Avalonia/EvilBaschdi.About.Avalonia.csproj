@@ -16,7 +16,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="EvilBaschdi.Avalonia.Core" Version="2022.12.5.709-develop" />
+		<PackageReference Include="EvilBaschdi.Avalonia.Core" Version="2022.12.23.1417-develop" />
 	</ItemGroup>
 
 	<ItemGroup>
