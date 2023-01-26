@@ -11,7 +11,8 @@ public class AboutViewModel : IAboutModel
     /// </summary>
     /// <param name="aboutContent"></param>
     /// <exception cref="ArgumentNullException"></exception>
-    protected AboutViewModel(IAboutContent aboutContent)
+    // ReSharper disable once MemberCanBeProtected.Global
+    public AboutViewModel(IAboutContent aboutContent)
     {
         _aboutContent = aboutContent ?? throw new ArgumentNullException(nameof(aboutContent));
     }
