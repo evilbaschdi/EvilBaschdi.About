@@ -11,7 +11,7 @@ public class AboutViewModel : IAboutModel
     /// </summary>
     /// <param name="aboutContent"></param>
     /// <exception cref="ArgumentNullException"></exception>
-    public AboutViewModel(IAboutContent aboutContent)
+    protected AboutViewModel(IAboutContent aboutContent)
     {
         _aboutContent = aboutContent ?? throw new ArgumentNullException(nameof(aboutContent));
     }

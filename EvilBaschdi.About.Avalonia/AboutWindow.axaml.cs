@@ -4,6 +4,7 @@ using EvilBaschdi.Avalonia.Core;
 namespace EvilBaschdi.About.Avalonia;
 
 /// <inheritdoc />
+// ReSharper disable once UnusedType.Global
 public partial class AboutWindow : Window
 {
     /// <summary>

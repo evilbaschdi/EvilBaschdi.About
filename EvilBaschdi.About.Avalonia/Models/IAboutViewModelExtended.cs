@@ -11,5 +11,6 @@ public interface IAboutViewModelExtended : IAboutModel
     // ReSharper disable once UnusedType.Global
     // ReSharper disable once UnusedMemberInSuper.Global
     // ReSharper disable once PropertyCanBeMadeInitOnly.Global
+    // ReSharper disable once UnusedMember.Global
     public Bitmap LogoSource { get; } // = new Bitmap(string.Empty);
 }
