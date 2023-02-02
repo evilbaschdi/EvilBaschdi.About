@@ -9,6 +9,7 @@
 		<BuiltInComInteropSupport>true</BuiltInComInteropSupport>
 		<EnableNETAnalyzers>true</EnableNETAnalyzers>
 		<ImplicitUsings>enable</ImplicitUsings>
+		<IsPackable>false</IsPackable>
 		<Title>EvilBaschdi.Avalonia.DummyApp</Title>
 		<Description>TestUi for EvilBaschdi.Avalonia.Core</Description>
 		<Version>$([System.DateTime]::UtcNow.ToString(yyyy.M.d.Hmm))</Version>
