@@ -10,6 +10,7 @@
 		<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
 		<EnableNETAnalyzers>true</EnableNETAnalyzers>
 		<ImplicitUsings>enable</ImplicitUsings>
+		<IsPackable>false</IsPackable>
 		<LangVersion>preview</LangVersion>
 		<OutputType>WinExe</OutputType>
 		<PackageProjectUrl>https://github.com/evilbaschdi/EvilBaschdi.Core.Wpf</PackageProjectUrl>
