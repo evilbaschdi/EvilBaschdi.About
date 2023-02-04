@@ -3,7 +3,7 @@
 /// <summary>
 /// </summary>
 // ReSharper disable once UnusedType.Global
-public class AboutViewModel : IAboutModel
+public class AboutViewModel : IAboutViewModel
 {
     private readonly IAboutContent _aboutContent;
 

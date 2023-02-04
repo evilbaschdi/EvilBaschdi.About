@@ -4,7 +4,7 @@ using EvilBaschdi.About.Core.Models;
 namespace EvilBaschdi.About.Avalonia.Models;
 
 /// <inheritdoc />
-public interface IAboutViewModelExtended : IAboutModel
+public interface IAboutViewModelExtended : IAboutViewModel
 {
     /// <summary>
     /// </summary>

@@ -2,10 +2,14 @@
 
 	<PropertyGroup>
 		<Description>About Window WPF</Description>
-		<PackageId>EvilBaschdi.About.WPF</PackageId>
+		<PackageId>EvilBaschdi.About.Wpf</PackageId>
 		<TargetFrameworks>net6.0-windows;net7.0-windows</TargetFrameworks>
 		<UseWPF>true</UseWPF>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="EvilBaschdi.Core.Wpf" Version="2023.2.4.954-develop" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\EvilBaschdi.About.Core\EvilBaschdi.About.Core.csproj" />
