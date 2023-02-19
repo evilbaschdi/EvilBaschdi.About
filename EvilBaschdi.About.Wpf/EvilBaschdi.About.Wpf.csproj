@@ -8,7 +8,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="EvilBaschdi.Core.Wpf" Version="2023.2.4.954-develop" />
+		<PackageReference Include="EvilBaschdi.Core.Wpf" Version="2023.2.19.747-develop" />
 	</ItemGroup>
 
 	<ItemGroup>
