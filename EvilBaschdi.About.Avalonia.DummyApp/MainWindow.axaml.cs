@@ -21,11 +21,12 @@ public partial class MainWindow : Window
     protected override void OnOpened(EventArgs e)
     {
         base.OnOpened(e);
-        IHandleOsDependentTitleBar handleOsDependentTitleBar = new HandleOsDependentTitleBar();
+        var handleOsDependentTitleBar = new HandleOsDependentTitleBar();
         handleOsDependentTitleBar.RunFor((this, HeaderPanel, MainPanel));
     }
 
     // ReSharper disable UnusedParameter.Local
+    // ReSharper disable once UnusedMember.Local
     private void AboutClick(object? sender, RoutedEventArgs e)
         // ReSharper restore UnusedParameter.Local
     {

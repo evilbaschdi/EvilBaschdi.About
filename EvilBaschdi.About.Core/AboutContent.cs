@@ -17,6 +17,7 @@ public class AboutContent : IAboutContent
     /// <param name="assembly"></param>
     /// <param name="logoSourcePath">AppDomain.CurrentDomain.BaseDirectory</param>
     /// <exception cref="ArgumentNullException"></exception>
+    // ReSharper disable once UnusedMember.Global
     public AboutContent(Assembly assembly, string logoSourcePath)
     {
         _assembly = assembly ?? throw new ArgumentNullException(nameof(assembly));

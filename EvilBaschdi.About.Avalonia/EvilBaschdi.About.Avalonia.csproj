@@ -1,13 +1,14 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<Description>About Window Avalonia</Description>
 		<PackageId>EvilBaschdi.About.Avalonia</PackageId>
-		<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+		<TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="EvilBaschdi.Core.Avalonia" Version="2023.2.19.751-develop" />
+		<PackageReference Update="EvilBaschdi.Core" Version="2023.2.21.1909-develop" />
+		<PackageReference Include="EvilBaschdi.Core.Avalonia" Version="2023.2.21.1938-develop" />
 	</ItemGroup>
 
 	<ItemGroup>
