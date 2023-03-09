@@ -6,12 +6,12 @@
 		x:Class="EvilBaschdi.About.Avalonia.DummyApp.MainWindow"
 		Icon="/Assets/b.ico"
 		TransparencyLevelHint="Mica"
-		Background="{x:Null}"
+		Background="Transparent"
 		Title="EvilBaschdi.Avalonia.DummyApp.MainWindow">
 
     <Panel Name="RootPanel">
 		<ExperimentalAcrylicBorder IsHitTestVisible="False">
-			<ExperimentalAcrylicBorder.Material>
+            <ExperimentalAcrylicBorder.Material>
 				<ExperimentalAcrylicMaterial
 					TintColor="Black"
 					TintOpacity="1"

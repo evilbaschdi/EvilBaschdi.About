@@ -6,7 +6,7 @@
         mc:Ignorable="d"
         x:Class="EvilBaschdi.About.Avalonia.AboutWindow"
         TransparencyLevelHint="Mica"
-        Background="{x:Null}"
+        Background="Transparent"
         Title="About"
         Height="460"
         Width="530">
