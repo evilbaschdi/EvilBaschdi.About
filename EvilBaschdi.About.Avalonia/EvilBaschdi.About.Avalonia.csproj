@@ -6,8 +6,7 @@
 		<TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
 	</PropertyGroup>
 
-	<ItemGroup>
-		<PackageReference Update="EvilBaschdi.Core" Version="2023.3.9.1752-develop" />
+	<ItemGroup>		
 		<PackageReference Include="EvilBaschdi.Core.Avalonia" Version="2023.3.9.1813-develop" />
 	</ItemGroup>
 

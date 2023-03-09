@@ -24,10 +24,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Update="EvilBaschdi.Core" Version="2023.3.9.1752-develop" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<Resource Include="b.ico" />
 		<Content Include="about.png">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>

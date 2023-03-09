@@ -31,7 +31,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="EvilBaschdi.Core" Version="2023.2.1.1815-develop" />
+		<PackageReference Include="EvilBaschdi.Core" Version="2023.3.9.1752-develop" />
 	</ItemGroup>
 
 	<!-- this project only -->

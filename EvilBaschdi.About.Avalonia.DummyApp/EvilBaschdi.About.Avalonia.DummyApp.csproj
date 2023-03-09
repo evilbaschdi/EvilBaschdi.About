@@ -32,10 +32,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Update="EvilBaschdi.Core" Version="2023.3.9.1752-develop" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<ProjectReference Include="..\EvilBaschdi.About.Avalonia\EvilBaschdi.About.Avalonia.csproj" />
 	</ItemGroup>
 

@@ -7,8 +7,7 @@
 		<UseWPF>true</UseWPF>
 	</PropertyGroup>
 
-	<ItemGroup>
-		<PackageReference Update="EvilBaschdi.Core" Version="2023.3.9.1752-develop" />
+	<ItemGroup>		
 		<PackageReference Include="EvilBaschdi.Core.Wpf" Version="2023.3.9.1808-develop" />
 	</ItemGroup>
 
