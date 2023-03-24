@@ -1,4 +1,5 @@
 using Avalonia;
+using EvilBaschdi.Core.Avalonia;
 
 namespace EvilBaschdi.About.Avalonia.DummyApp;
 
@@ -15,12 +16,5 @@ internal class Program
     // Avalonia configuration, don't remove; also used by visual designer.
     // ReSharper disable once MemberCanBePrivate.Global
     public static AppBuilder BuildAvaloniaApp()
-        => AppBuilder.Configure<App>()
-                     .UsePlatformDetect()
-                     .LogToTrace()
-                     .With(new Win32PlatformOptions
-                           {
-                               UseWindowsUIComposition = true,
-                               CompositionBackdropCornerRadius = 8f
-                           });
+        => new AppBuilderImplementation<App>().Value;
 }
