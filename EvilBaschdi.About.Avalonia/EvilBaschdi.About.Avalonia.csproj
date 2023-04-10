@@ -7,7 +7,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>		
-		<PackageReference Include="EvilBaschdi.Core.Avalonia" Version="2023.3.24.710-develop" />
+		<PackageReference Include="EvilBaschdi.Core.Avalonia" Version="2023.4.10.1354-develop" />
 	</ItemGroup>
 
 	<ItemGroup>

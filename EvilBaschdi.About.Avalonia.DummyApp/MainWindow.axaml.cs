@@ -22,7 +22,7 @@ public partial class MainWindow : Window
     {
         base.OnOpened(e);
         var handleOsDependentTitleBar = new HandleOsDependentTitleBar();
-        handleOsDependentTitleBar.RunFor((this, HeaderPanel, MainPanel));
+        handleOsDependentTitleBar.RunFor((this, HeaderPanel, MainPanel, AcrylicBorder));
     }
 
     // ReSharper disable UnusedParameter.Local
