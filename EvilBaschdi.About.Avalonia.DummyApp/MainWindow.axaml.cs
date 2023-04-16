@@ -33,10 +33,7 @@ public partial class MainWindow : Window
         ICurrentAssembly currentAssembly = new CurrentAssembly();
         IAboutContent aboutContent = new AboutContent(currentAssembly);
         IAboutViewModelExtended aboutModel = new AboutViewModelExtended(aboutContent);
-        var aboutWindow = new AboutWindow
-                          {
-                              DataContext = aboutModel
-                          };
+        var aboutWindow = new AboutWindow(aboutModel);
         aboutWindow.ShowDialog(this);
     }
 }

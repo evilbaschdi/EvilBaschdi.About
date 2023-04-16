@@ -16,19 +16,13 @@ public partial class AboutWindow
 
     /// <exception cref="ArgumentNullException"></exception>
     /// <inheritdoc />
-    public AboutWindow(IAboutViewModel aboutViewModel, [NotNull] IApplyMicaBrush applyMicaBrush)
+    public AboutWindow([NotNull] IAboutViewModel aboutViewModel, [NotNull] IApplyMicaBrush applyMicaBrush)
     {
-        if (aboutViewModel == null)
-        {
-            throw new ArgumentNullException(nameof(aboutViewModel));
-        }
-
-        _applyMicaBrush = applyMicaBrush ?? throw new ArgumentNullException(nameof(applyMicaBrush));
-
         InitializeComponent();
 
         Loaded += AboutWindowLoaded;
-        DataContext = aboutViewModel;
+        _applyMicaBrush = applyMicaBrush ?? throw new ArgumentNullException(nameof(applyMicaBrush));
+        DataContext = aboutViewModel ?? throw new ArgumentNullException(nameof(aboutViewModel));
     }
 
     // ReSharper disable once MemberCanBeMadeStatic.Local
