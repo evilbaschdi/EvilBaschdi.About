@@ -11,13 +11,19 @@ public partial class AboutWindow : Window
     /// <summary>
     ///     Constructor
     /// </summary>
-    public AboutWindow([NotNull] IAboutViewModelExtended aboutViewModel)
+    public AboutWindow([NotNull] IAboutViewModelExtended aboutViewModel,
+                       [NotNull] IApplicationLayout applicationLayout,
+                       [NotNull] IHandleOsDependentTitleBar handleOsDependentTitleBar)
     {
+        ArgumentNullException.ThrowIfNull(aboutViewModel);
+        ArgumentNullException.ThrowIfNull(applicationLayout);
+        ArgumentNullException.ThrowIfNull(handleOsDependentTitleBar);
+
         InitializeComponent();
 
-        IHandleOsDependentTitleBar handleOsDependentTitleBar = new HandleOsDependentTitleBar();
-        handleOsDependentTitleBar.RunFor((this, HeaderPanel, MainPanel, AcrylicBorder));
+        handleOsDependentTitleBar.RunFor(this);
+        applicationLayout.RunFor((this, true, false));
 
-        DataContext = aboutViewModel ?? throw new ArgumentNullException(nameof(aboutViewModel));
+        DataContext = aboutViewModel;
     }
 }

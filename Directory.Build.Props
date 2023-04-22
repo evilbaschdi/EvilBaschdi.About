@@ -28,10 +28,20 @@
 	<ItemGroup>
 		<Using Include="EvilBaschdi.Core" />
 		<Using Include="JetBrains.Annotations" />
+		<Using Include="EvilBaschdi.About.Core" />
+		<Using Include="EvilBaschdi.About.Core.Models" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="EvilBaschdi.Core" Version="2023.4.21.523-develop" />
+	</ItemGroup>
+	
+	<ItemGroup Condition="$(Description.Contains('Avalonia'))">
+		<PackageReference Include="EvilBaschdi.Core.Avalonia" Version="2023.4.22.1016-develop" />
+	</ItemGroup>
+
+	<ItemGroup Condition="$(Description.Contains('Wpf'))">
+		<PackageReference Include="EvilBaschdi.Core.Wpf" Version="2023.4.22.921-develop" />
 	</ItemGroup>
 
 	<!-- this project only -->

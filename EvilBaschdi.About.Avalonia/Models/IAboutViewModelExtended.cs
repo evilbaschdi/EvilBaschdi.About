@@ -1,5 +1,4 @@
 ﻿using Avalonia.Media.Imaging;
-using EvilBaschdi.About.Core.Models;
 
 namespace EvilBaschdi.About.Avalonia.Models;
 

@@ -1,7 +1,6 @@
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using EvilBaschdi.About.Avalonia.Models;
-using EvilBaschdi.About.Core;
 using EvilBaschdi.Core.Avalonia;
 
 namespace EvilBaschdi.About.Avalonia.DummyApp;
@@ -9,20 +8,23 @@ namespace EvilBaschdi.About.Avalonia.DummyApp;
 /// <inheritdoc />
 public partial class MainWindow : Window
 {
+    private readonly IHandleOsDependentTitleBar _handleOsDependentTitleBar;
+
     /// <summary>
     ///     Constructor
     /// </summary>
     public MainWindow()
     {
         InitializeComponent();
+        _handleOsDependentTitleBar = new HandleOsDependentTitleBar();
     }
 
     /// <inheritdoc />
     protected override void OnOpened(EventArgs e)
     {
         base.OnOpened(e);
-        var handleOsDependentTitleBar = new HandleOsDependentTitleBar();
-        handleOsDependentTitleBar.RunFor((this, HeaderPanel, MainPanel, AcrylicBorder));
+
+        _handleOsDependentTitleBar.RunFor(this);
     }
 
     // ReSharper disable UnusedParameter.Local
@@ -33,7 +35,9 @@ public partial class MainWindow : Window
         ICurrentAssembly currentAssembly = new CurrentAssembly();
         IAboutContent aboutContent = new AboutContent(currentAssembly);
         IAboutViewModelExtended aboutModel = new AboutViewModelExtended(aboutContent);
-        var aboutWindow = new AboutWindow(aboutModel);
+        IApplicationLayout applicationLayout = new ApplicationLayout();
+
+        var aboutWindow = new AboutWindow(aboutModel, applicationLayout, _handleOsDependentTitleBar);
         aboutWindow.ShowDialog(this);
     }
 }

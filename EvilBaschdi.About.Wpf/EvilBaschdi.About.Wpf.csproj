@@ -1,15 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<Description>About Window WPF</Description>
+		<Description>About Window Wpf</Description>
 		<PackageId>EvilBaschdi.About.Wpf</PackageId>
 		<TargetFrameworks>net6.0-windows;net7.0-windows;net8.0-windows</TargetFrameworks>
 		<UseWPF>true</UseWPF>
 	</PropertyGroup>
-
-	<ItemGroup>		
-		<PackageReference Include="EvilBaschdi.Core.Wpf" Version="2023.4.21.547-develop" />
-	</ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\EvilBaschdi.About.Core\EvilBaschdi.About.Core.csproj" />

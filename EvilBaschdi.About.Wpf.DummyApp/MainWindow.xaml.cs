@@ -1,8 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Interop;
 using System.Windows.Media;
-using EvilBaschdi.About.Core;
-using EvilBaschdi.About.Core.Models;
 using EvilBaschdi.Core.Wpf;
 
 namespace EvilBaschdi.About.Wpf.DummyApp;
@@ -47,7 +45,8 @@ public partial class MainWindow
         ICurrentAssembly currentAssembly = new CurrentAssembly();
         IAboutContent aboutContent = new AboutContent(currentAssembly);
         IAboutViewModel aboutViewModel = new AboutViewModel(aboutContent);
-        var aboutWindow = new AboutWindow(aboutViewModel, _applyMicaBrush);
+        IApplicationLayout applicationLayout = new ApplicationLayout();
+        var aboutWindow = new AboutWindow(aboutViewModel, applicationLayout, _applyMicaBrush);
         aboutWindow.ShowDialog();
     }
 }

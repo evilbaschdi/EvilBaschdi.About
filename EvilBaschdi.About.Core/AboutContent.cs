@@ -1,6 +1,5 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
-using EvilBaschdi.About.Core.Models;
 
 namespace EvilBaschdi.About.Core;
 

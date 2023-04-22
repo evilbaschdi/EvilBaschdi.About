@@ -1,7 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Interop;
 using System.Windows.Media;
-using EvilBaschdi.About.Core.Models;
 using EvilBaschdi.Core.Wpf;
 
 namespace EvilBaschdi.About.Wpf;
@@ -16,13 +15,21 @@ public partial class AboutWindow
 
     /// <exception cref="ArgumentNullException"></exception>
     /// <inheritdoc />
-    public AboutWindow([NotNull] IAboutViewModel aboutViewModel, [NotNull] IApplyMicaBrush applyMicaBrush)
+    public AboutWindow([NotNull] IAboutViewModel aboutViewModel,
+                       [NotNull] IApplicationLayout applicationLayout,
+                       [NotNull] IApplyMicaBrush applyMicaBrush)
     {
+        ArgumentNullException.ThrowIfNull(aboutViewModel);
+        ArgumentNullException.ThrowIfNull(applicationLayout);
+        ArgumentNullException.ThrowIfNull(applyMicaBrush);
+        _applyMicaBrush = applyMicaBrush;
+
         InitializeComponent();
 
+        applicationLayout.RunFor((this, true, false));
+
         Loaded += AboutWindowLoaded;
-        _applyMicaBrush = applyMicaBrush ?? throw new ArgumentNullException(nameof(applyMicaBrush));
-        DataContext = aboutViewModel ?? throw new ArgumentNullException(nameof(aboutViewModel));
+        DataContext = aboutViewModel;
     }
 
     // ReSharper disable once MemberCanBeMadeStatic.Local
