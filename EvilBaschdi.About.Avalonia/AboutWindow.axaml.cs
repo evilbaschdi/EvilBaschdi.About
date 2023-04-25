@@ -1,4 +1,6 @@
+using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Controls.ApplicationLifetimes;
 using EvilBaschdi.About.Avalonia.Models;
 using EvilBaschdi.Core.Avalonia;
 
@@ -23,6 +25,12 @@ public partial class AboutWindow : Window
 
         handleOsDependentTitleBar.RunFor(this);
         applicationLayout.RunFor((this, true, false));
+
+        var mainWindow = Application.Current?.ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop ? desktop.MainWindow : null;
+        if (mainWindow != null)
+        {
+            Icon = mainWindow.Icon;
+        }
 
         DataContext = aboutViewModel;
     }
