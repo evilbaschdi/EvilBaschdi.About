@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvilBaschdi.About.Core", "E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{29440E64-BB8C-4C43-98AE-609456CDEF5D}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 		Directory.Build.Props = Directory.Build.Props
+		Directory.Build.Targets = Directory.Build.Targets
 		global.json = global.json
 		NuGet.config = NuGet.config
 	EndProjectSection
@@ -19,6 +21,16 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvilBaschdi.About.Avalonia.DummyApp", "EvilBaschdi.About.Avalonia.DummyApp\EvilBaschdi.About.Avalonia.DummyApp.csproj", "{A10B3418-3BF3-415C-8EFC-142621E508C5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvilBaschdi.About.Wpf.DummyApp", "EvilBaschdi.About.Wpf.DummyApp\EvilBaschdi.About.Wpf.DummyApp.csproj", "{9B742166-A7B3-4290-BF38-B24C86156341}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{02FD2ACD-71DF-48AC-BD0E-772F1124120B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DummyApp", "DummyApp", "{8A64A277-A19F-403B-BA74-82565286446B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvilBaschdi.About.Avalonia.Tests", "EvilBaschdi.About.Avalonia.Tests\EvilBaschdi.About.Avalonia.Tests.csproj", "{7AFED102-C43F-462A-AD19-3A6D24CE64C0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvilBaschdi.About.Core.Tests", "EvilBaschdi.About.Core.Tests\EvilBaschdi.About.Core.Tests.csproj", "{5051A9B7-509E-45DE-9BDA-6B82C999AE83}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvilBaschdi.About.Wpf.Tests", "EvilBaschdi.About.Wpf.Tests\EvilBaschdi.About.Wpf.Tests.csproj", "{C8E61218-72FE-44E8-A996-EA2B606107DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,9 +58,28 @@ Global
 		{9B742166-A7B3-4290-BF38-B24C86156341}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B742166-A7B3-4290-BF38-B24C86156341}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B742166-A7B3-4290-BF38-B24C86156341}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AFED102-C43F-462A-AD19-3A6D24CE64C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AFED102-C43F-462A-AD19-3A6D24CE64C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AFED102-C43F-462A-AD19-3A6D24CE64C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AFED102-C43F-462A-AD19-3A6D24CE64C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5051A9B7-509E-45DE-9BDA-6B82C999AE83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5051A9B7-509E-45DE-9BDA-6B82C999AE83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5051A9B7-509E-45DE-9BDA-6B82C999AE83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5051A9B7-509E-45DE-9BDA-6B82C999AE83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8E61218-72FE-44E8-A996-EA2B606107DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8E61218-72FE-44E8-A996-EA2B606107DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8E61218-72FE-44E8-A996-EA2B606107DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8E61218-72FE-44E8-A996-EA2B606107DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A10B3418-3BF3-415C-8EFC-142621E508C5} = {8A64A277-A19F-403B-BA74-82565286446B}
+		{9B742166-A7B3-4290-BF38-B24C86156341} = {8A64A277-A19F-403B-BA74-82565286446B}
+		{7AFED102-C43F-462A-AD19-3A6D24CE64C0} = {02FD2ACD-71DF-48AC-BD0E-772F1124120B}
+		{5051A9B7-509E-45DE-9BDA-6B82C999AE83} = {02FD2ACD-71DF-48AC-BD0E-772F1124120B}
+		{C8E61218-72FE-44E8-A996-EA2B606107DB} = {02FD2ACD-71DF-48AC-BD0E-772F1124120B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1A9F5560-9B19-4C79-9E10-46FD48F3E7A0}
