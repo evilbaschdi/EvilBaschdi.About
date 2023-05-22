@@ -1,14 +1,22 @@
 <Project>
 
 	<PropertyGroup>
+		<Authors>Sebastian Walter</Authors>
+		<Company>evilbaschdi (Sebastian Walter)</Company>
+		<Copyright>Copyright © 2015 - $([System.DateTime]::UtcNow.ToString(yyyy)) evilbaschdi</Copyright>
 		<DebugSymbols>true</DebugSymbols>
 		<DebugType>full</DebugType>
+		<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
 		<EnableNETAnalyzers>true</EnableNETAnalyzers>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<IsPackable>true</IsPackable>
 		<LangVersion>preview</LangVersion>
 		<PackageIcon>icon.png</PackageIcon>
 		<PackageIconUrl><![CDATA[https://avatars1.githubusercontent.com/u/1897807?s=120&v=4]]></PackageIconUrl>
+		<PackageProjectUrl>https://github.com/evilbaschdi/EvilBaschdi.About</PackageProjectUrl>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<RepositoryUrl>https://github.com/evilbaschdi/EvilBaschdi.About</RepositoryUrl>
+		<VersionPrefix>$([System.DateTime]::UtcNow.ToString(yyyy.M.d.Hmm))</VersionPrefix>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -30,7 +38,10 @@
 	</Choose>
 
 	<!-- ReSharper disable once UnknownProperty -->
-	<PropertyGroup Condition="'$(IsTestProject)' == 'true'">
+	<PropertyGroup Condition="$(MSBuildProjectName.EndsWith('.Tests'))">
+		<GenerateDocumentationFile>False</GenerateDocumentationFile>
+		<IsPackable>false</IsPackable>
+		<IsTestProject>true</IsTestProject>
 		<NoWarn>1701;1702</NoWarn>
 	</PropertyGroup>
 
@@ -42,7 +53,7 @@
 	</ItemGroup>
 
 	<!-- ReSharper disable once UnknownProperty -->
-	<ItemGroup Condition="'$(IsTestProject)' == 'true'">
+	<ItemGroup Condition="$(MSBuildProjectName.EndsWith('.Tests'))">
 		<Using Include="AutoFixture.Idioms" />
 		<Using Include="AutoFixture.Xunit2" />
 		<Using Include="EvilBaschdi.Testing" />
@@ -54,66 +65,67 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="EvilBaschdi.Core" Version="2023.4.21.523-develop" />
+		<PackageReference Include="EvilBaschdi.Core" />
 	</ItemGroup>
 
 	<ItemGroup Condition="$(Description.Contains('Avalonia'))">
-		<PackageReference Include="EvilBaschdi.Core.Avalonia" Version="2023.5.9.2008-develop" />
+		<PackageReference Include="EvilBaschdi.Core.Avalonia" />
 	</ItemGroup>
 
 	<ItemGroup Condition="$(Description.Contains('Wpf'))">
-		<PackageReference Include="EvilBaschdi.Core.Wpf" Version="2023.5.10.1552-develop" />
+		<PackageReference Include="EvilBaschdi.Core.Wpf" />
 	</ItemGroup>
 
 	<!-- ReSharper disable once UnknownProperty -->
 	<ItemGroup Condition="'$(IsTestProject)' != 'true'">
-		<PackageReference Include="DotNet.ReproducibleBuilds" Version="1.1.1">
+		<PackageReference Include="DotNet.ReproducibleBuilds">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="Microsoft.SourceLink.AzureRepos.Git" Version="1.1.1">
+		<PackageReference Include="Microsoft.SourceLink.AzureRepos.Git">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
+		<PackageReference Include="Microsoft.SourceLink.GitHub">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 	</ItemGroup>
 
 	<PropertyGroup Condition="$(MSBuildProjectName.EndsWith('.Tests'))">
-		<IsPackable>False</IsPackable>
+		<IsPackable>false</IsPackable>
+		<IsTestProject>true</IsTestProject>
 	</PropertyGroup>
 
 	<!-- ReSharper disable once UnknownProperty -->
 	<ItemGroup Condition="$(MSBuildProjectName.EndsWith('.Tests'))">
-		<PackageReference Include="EvilBaschdi.Testing" Version="2023.5.9.1602-develop" />
-		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.0-preview-20230223-05" />
-		<PackageReference Include="coverlet.collector" Version="3.2.0">
+		<PackageReference Include="EvilBaschdi.Testing" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" />
+		<PackageReference Include="coverlet.collector">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="FluentAssertions.Analyzers" Version="0.17.2">
+		<PackageReference Include="FluentAssertions.Analyzers">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="Meziantou.FluentAssertionsAnalyzers" Version="1.0.10">
+		<PackageReference Include="Meziantou.FluentAssertionsAnalyzers">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="NSubstitute.Analyzers.CSharp" Version="1.0.16">
+		<PackageReference Include="NSubstitute.Analyzers.CSharp">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="xunit.analyzers" Version="1.2.0-pre.8">
+		<PackageReference Include="xunit.analyzers">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="xunit.runner.console" Version="2.5.0-pre.13">
+		<PackageReference Include="xunit.runner.console">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="xunit.runner.visualstudio" Version="2.4.6-preview.9">
+		<PackageReference Include="xunit.runner.visualstudio">
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 			<PrivateAssets>all</PrivateAssets>
 		</PackageReference>

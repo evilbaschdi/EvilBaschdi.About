@@ -1,16 +1,5 @@
 <Project>
 
-	<PropertyGroup Condition="'$(IsTestProject)' != 'true'">
-		<Authors>Sebastian Walter</Authors>
-		<Company>evilbaschdi (Sebastian Walter)</Company>
-		<Copyright>Copyright © 2015 - $([System.DateTime]::UtcNow.ToString(yyyy)) evilbaschdi</Copyright>
-		<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
-		<PackageProjectUrl>https://github.com/evilbaschdi/EvilBaschdi.About</PackageProjectUrl>
-		<PublishRepositoryUrl>true</PublishRepositoryUrl>
-		<RepositoryUrl>https://github.com/evilbaschdi/EvilBaschdi.About</RepositoryUrl>
-		<VersionPrefix>$([System.DateTime]::UtcNow.ToString(yyyy.M.d.Hmm))</VersionPrefix>
-	</PropertyGroup>
-
 	<Choose>
 		<When Condition="$(MSBuildProjectName.Contains('Wpf'))">
 			<PropertyGroup>
