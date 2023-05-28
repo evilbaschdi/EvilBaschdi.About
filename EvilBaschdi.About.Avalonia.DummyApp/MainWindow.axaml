@@ -7,6 +7,7 @@
         Icon="/Assets/b.ico"
         TransparencyLevelHint="Mica"
         Background="Transparent"
+        CanResize="False"
         Title="EvilBaschdi.Avalonia.DummyApp.MainWindow">
 
     <Panel Name="RootPanel">

@@ -16,6 +16,7 @@
 		<PackageProjectUrl>https://github.com/evilbaschdi/EvilBaschdi.About</PackageProjectUrl>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<RepositoryUrl>https://github.com/evilbaschdi/EvilBaschdi.About</RepositoryUrl>
+		<SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
 		<VersionPrefix>$([System.DateTime]::UtcNow.ToString(yyyy.M.d.Hmm))</VersionPrefix>
 	</PropertyGroup>
 
