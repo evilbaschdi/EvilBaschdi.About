@@ -19,7 +19,4 @@ public class AboutModelTests
     {
         assertion.Verify(typeof(AboutModel).GetMethods().Where(method => !method.IsAbstract));
     }
-
-
 }
-

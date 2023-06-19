@@ -19,7 +19,4 @@ public class AboutViewModelTests
     {
         assertion.Verify(typeof(AboutViewModel).GetMethods().Where(method => !method.IsAbstract));
     }
-
-
 }
-

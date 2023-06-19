@@ -19,7 +19,4 @@ public class AboutContentTests
     {
         assertion.Verify(typeof(AboutContent).GetMethods().Where(method => !method.IsAbstract));
     }
-
-
 }
-
