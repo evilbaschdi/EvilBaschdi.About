@@ -67,6 +67,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="EvilBaschdi.Core" />
+		<PackageReference Include="EvilBaschdi.DependencyInjection" />
 	</ItemGroup>
 
 	<ItemGroup Condition="$(Description.Contains('Avalonia'))">
@@ -80,14 +81,6 @@
 	<!-- ReSharper disable once UnknownProperty -->
 	<ItemGroup Condition="'$(IsTestProject)' != 'true'">
 		<PackageReference Include="DotNet.ReproducibleBuilds">
-			<PrivateAssets>all</PrivateAssets>
-			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-		</PackageReference>
-		<PackageReference Include="Microsoft.SourceLink.AzureRepos.Git">
-			<PrivateAssets>all</PrivateAssets>
-			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-		</PackageReference>
-		<PackageReference Include="Microsoft.SourceLink.GitHub">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>

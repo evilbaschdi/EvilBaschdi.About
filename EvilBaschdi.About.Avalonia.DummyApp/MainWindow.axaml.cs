@@ -1,14 +1,14 @@
 using Avalonia.Controls;
 using Avalonia.Interactivity;
-using EvilBaschdi.About.Avalonia.Models;
 using EvilBaschdi.Core.Avalonia;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace EvilBaschdi.About.Avalonia.DummyApp;
 
 /// <inheritdoc />
 public partial class MainWindow : Window
 {
-    private readonly IHandleOsDependentTitleBar _handleOsDependentTitleBar;
+    private IHandleOsDependentTitleBar _handleOsDependentTitleBar;
 
     /// <summary>
     ///     Constructor
@@ -16,15 +16,16 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-        _handleOsDependentTitleBar = new HandleOsDependentTitleBar();
+        ApplyLayout();
     }
 
-    /// <inheritdoc />
-    protected override void OnOpened(EventArgs e)
+    private void ApplyLayout()
     {
-        base.OnOpened(e);
+        _handleOsDependentTitleBar = App.ServiceProvider?.GetRequiredService<IHandleOsDependentTitleBar>();
+        _handleOsDependentTitleBar?.RunFor(this);
 
-        _handleOsDependentTitleBar.RunFor(this);
+        var applicationLayout = App.ServiceProvider?.GetRequiredService<IApplicationLayout>();
+        applicationLayout?.RunFor((this, true, false));
     }
 
     // ReSharper disable UnusedParameter.Local
@@ -32,12 +33,7 @@ public partial class MainWindow : Window
     private void AboutClick(object? sender, RoutedEventArgs e)
         // ReSharper restore UnusedParameter.Local
     {
-        ICurrentAssembly currentAssembly = new CurrentAssembly();
-        IAboutContent aboutContent = new AboutContent(currentAssembly);
-        IAboutViewModelExtended aboutModel = new AboutViewModelExtended(aboutContent);
-        IApplicationLayout applicationLayout = new ApplicationLayout();
-
-        var aboutWindow = new AboutWindow(aboutModel, applicationLayout, _handleOsDependentTitleBar);
+        var aboutWindow = App.ServiceProvider.GetRequiredService<AboutWindow>();
         aboutWindow.ShowDialog(this);
     }
 }

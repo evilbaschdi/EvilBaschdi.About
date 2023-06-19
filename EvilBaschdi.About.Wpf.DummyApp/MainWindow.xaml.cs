@@ -2,6 +2,7 @@
 using System.Windows.Interop;
 using System.Windows.Media;
 using EvilBaschdi.Core.Wpf;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace EvilBaschdi.About.Wpf.DummyApp;
 
@@ -10,8 +11,6 @@ namespace EvilBaschdi.About.Wpf.DummyApp;
 /// </summary>
 public partial class MainWindow
 {
-    private IApplyMicaBrush _applyMicaBrush;
-
     /// <summary>
     /// </summary>
     public MainWindow()
@@ -24,8 +23,8 @@ public partial class MainWindow
     // ReSharper disable once MemberCanBeMadeStatic.Local
     private void WindowContentRendered(object sender, EventArgs e)
     {
-        _applyMicaBrush = new ApplyMicaBrush();
-        _applyMicaBrush.RunFor((HwndSource)sender);
+        var applyMicaBrush = new ApplyMicaBrush();
+        applyMicaBrush.RunFor((HwndSource)sender);
     }
 
     private void MainWindowLoaded(object sender, RoutedEventArgs e)
@@ -42,11 +41,7 @@ public partial class MainWindow
 
     private void AboutClick(object sender, RoutedEventArgs e)
     {
-        ICurrentAssembly currentAssembly = new CurrentAssembly();
-        IAboutContent aboutContent = new AboutContent(currentAssembly);
-        IAboutViewModel aboutViewModel = new AboutViewModel(aboutContent);
-        IApplicationLayout applicationLayout = new ApplicationLayout();
-        var aboutWindow = new AboutWindow(aboutViewModel, applicationLayout, _applyMicaBrush);
+        var aboutWindow = App.ServiceProvider.GetRequiredService<AboutWindow>();
         aboutWindow.ShowDialog();
     }
 }
