@@ -30,7 +30,7 @@ public partial class MainWindow : Window
 
     // ReSharper disable UnusedParameter.Local
     // ReSharper disable once UnusedMember.Local
-    private void AboutClick(object? sender, RoutedEventArgs e)
+    private void AboutClick(object sender, RoutedEventArgs e)
         // ReSharper restore UnusedParameter.Local
     {
         var aboutWindow = App.ServiceProvider.GetRequiredService<AboutWindow>();

@@ -1,6 +1,4 @@
-using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Controls.ApplicationLifetimes;
 using EvilBaschdi.About.Avalonia.Models;
 using EvilBaschdi.Core.Avalonia;
 
@@ -15,18 +13,20 @@ public partial class AboutWindow : Window
     /// </summary>
     public AboutWindow([NotNull] IAboutViewModelExtended aboutViewModel,
                        [NotNull] IApplicationLayout applicationLayout,
-                       [NotNull] IHandleOsDependentTitleBar handleOsDependentTitleBar)
+                       [NotNull] IHandleOsDependentTitleBar handleOsDependentTitleBar,
+                       [NotNull] IMainWindowByApplicationLifetime mainWindowByApplicationLifetime)
     {
         ArgumentNullException.ThrowIfNull(aboutViewModel);
         ArgumentNullException.ThrowIfNull(applicationLayout);
         ArgumentNullException.ThrowIfNull(handleOsDependentTitleBar);
+        ArgumentNullException.ThrowIfNull(mainWindowByApplicationLifetime);
 
         InitializeComponent();
 
         handleOsDependentTitleBar.RunFor(this);
         applicationLayout.RunFor((this, true, false));
 
-        var mainWindow = Application.Current?.ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop ? desktop.MainWindow : null;
+        var mainWindow = mainWindowByApplicationLifetime.Value;
         if (mainWindow != null)
         {
             Icon = mainWindow.Icon;
