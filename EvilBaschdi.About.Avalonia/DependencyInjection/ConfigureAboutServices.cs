@@ -20,6 +20,7 @@ public class ConfigureAboutServices : IConfigureAboutServices
         services.TryAddSingleton<IApplicationLayout, ApplicationLayout>();
         services.TryAddSingleton<ICurrentAssembly, CurrentAssembly>();
         services.TryAddSingleton<IHandleOsDependentTitleBar, HandleOsDependentTitleBar>();
+        services.TryAddSingleton<IMainWindowByApplicationLifetime, MainWindowByApplicationLifetime>();
 
         services.AddTransient(typeof(AboutWindow));
     }
