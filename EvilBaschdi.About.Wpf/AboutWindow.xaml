@@ -7,7 +7,6 @@
         xmlns:about="clr-namespace:EvilBaschdi.About.Wpf"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Background="Transparent"
         Title="About"
         Height="460"
         Width="530">
