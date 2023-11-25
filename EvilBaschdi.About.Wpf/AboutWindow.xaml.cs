@@ -35,7 +35,7 @@ public partial class AboutWindow
     // ReSharper disable once MemberCanBeMadeStatic.Local
     private void WindowContentRendered(object sender, EventArgs e)
     {
-        _applyMicaBrush.RunFor((HwndSource)sender);
+        _applyMicaBrush.RunFor((HwndSource)sender, this);
     }
 
     private void AboutWindowLoaded(object sender, RoutedEventArgs e)

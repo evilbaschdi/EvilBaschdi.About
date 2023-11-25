@@ -24,7 +24,7 @@ public partial class MainWindow
     private void WindowContentRendered(object sender, EventArgs e)
     {
         var applyMicaBrush = new ApplyMicaBrush();
-        applyMicaBrush.RunFor((HwndSource)sender);
+        applyMicaBrush.RunFor((HwndSource)sender, this);
     }
 
     private void MainWindowLoaded(object sender, RoutedEventArgs e)
