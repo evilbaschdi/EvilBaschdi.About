@@ -33,13 +33,17 @@ public partial class AboutWindow
     }
 
     // ReSharper disable once MemberCanBeMadeStatic.Local
-    private void WindowContentRendered(object sender, EventArgs e)
+    private void WindowContentRendered([NotNull] object sender, [NotNull] EventArgs e)
     {
+        ArgumentNullException.ThrowIfNull(sender);
+        ArgumentNullException.ThrowIfNull(e);
         _applyMicaBrush.RunFor((HwndSource)sender, this);
     }
 
-    private void AboutWindowLoaded(object sender, RoutedEventArgs e)
+    private void AboutWindowLoaded([NotNull] object sender, [NotNull] RoutedEventArgs e)
     {
+        ArgumentNullException.ThrowIfNull(sender);
+        ArgumentNullException.ThrowIfNull(e);
         // Get PresentationSource
         var presentationSource = PresentationSource.FromVisual((Visual)sender);
 

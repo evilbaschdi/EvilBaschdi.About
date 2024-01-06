@@ -7,7 +7,8 @@
 /// <param name="aboutContent"></param>
 /// <exception cref="ArgumentNullException"></exception>
 // ReSharper disable once UnusedType.Global
-public class AboutViewModel(IAboutContent aboutContent) : IAboutViewModel
+public class AboutViewModel(
+    [NotNull] IAboutContent aboutContent) : IAboutViewModel
 {
     private readonly IAboutContent _aboutContent = aboutContent ?? throw new ArgumentNullException(nameof(aboutContent));
 

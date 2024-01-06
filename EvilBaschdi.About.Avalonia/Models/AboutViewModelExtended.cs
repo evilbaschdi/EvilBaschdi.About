@@ -16,8 +16,7 @@ public class AboutViewModelExtended : AboutViewModel, IAboutViewModelExtended
     public AboutViewModelExtended(IAboutContent aboutContent)
         : base(aboutContent)
     {
-        var innerAboutContent = aboutContent ?? throw new ArgumentNullException(nameof(aboutContent));
-        _aboutModel = innerAboutContent.Value;
+        _aboutModel = aboutContent.Value;
     }
 
     /// <summary>

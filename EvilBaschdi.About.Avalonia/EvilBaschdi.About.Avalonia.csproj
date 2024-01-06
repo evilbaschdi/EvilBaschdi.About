@@ -3,7 +3,6 @@
 	<PropertyGroup>
 		<Description>About Window Avalonia</Description>
 		<PackageId>EvilBaschdi.About.Avalonia</PackageId>
-		<TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
 	</PropertyGroup>
 
 	<ItemGroup>

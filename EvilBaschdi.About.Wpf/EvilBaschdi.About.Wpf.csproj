@@ -3,7 +3,6 @@
 	<PropertyGroup>
 		<Description>About Window Wpf</Description>
 		<PackageId>EvilBaschdi.About.Wpf</PackageId>
-		<TargetFrameworks>net6.0-windows;net7.0-windows;net8.0-windows</TargetFrameworks>
 		<UseWPF>true</UseWPF>
 	</PropertyGroup>
 
