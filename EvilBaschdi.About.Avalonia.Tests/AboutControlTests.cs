@@ -19,9 +19,10 @@ public class AboutControlTests
     [Theory, NSubstituteOmitAutoPropertiesTrueAutoData]
     public void Methods_HaveNullGuards(GuardClauseAssertion assertion)
     {
+        var baseMethods = typeof(AboutControl).BaseType?.GetMethods().Select(method => method.Name) ?? [];
+
         assertion.Verify(typeof(AboutControl).GetMethods().Where(method => !method.IsAbstract &
-                                                                           !method.Name.StartsWith("set") &
-                                                                           !method.Name.StartsWith("add") &
-                                                                           !method.Name.StartsWith("remove")));
+                                                                           !baseMethods.Contains(method.Name)
+        ));
     }
 }
