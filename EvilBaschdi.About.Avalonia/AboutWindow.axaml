@@ -6,13 +6,14 @@
         mc:Ignorable="d"
         x:Class="EvilBaschdi.About.Avalonia.AboutWindow"
         TransparencyLevelHint="Mica"
-        Background="{x:Null}"
+        Background="Transparent"
+        CanResize="False"
         Title="About"
         Height="460"
         Width="530">
 
     <Panel Name="RootPanel">
-        <ExperimentalAcrylicBorder IsHitTestVisible="False">
+        <ExperimentalAcrylicBorder IsHitTestVisible="False" Name="AcrylicBorder">
             <ExperimentalAcrylicBorder.Material>
                 <ExperimentalAcrylicMaterial
                     TintColor="Black"
@@ -20,10 +21,6 @@
                     MaterialOpacity="0.9" />
             </ExperimentalAcrylicBorder.Material>
         </ExperimentalAcrylicBorder>
-
-        <Panel Name="HeaderPanel" IsVisible="False">
-            <TextBlock Text="About" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,7,0,0" />
-        </Panel>
 
         <Panel Name="MainPanel" Margin="0,0,0,0">
             <Panel>

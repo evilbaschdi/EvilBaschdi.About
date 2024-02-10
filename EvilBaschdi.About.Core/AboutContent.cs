@@ -1,6 +1,5 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
-using EvilBaschdi.About.Core.Models;
 
 namespace EvilBaschdi.About.Core;
 
@@ -17,7 +16,8 @@ public class AboutContent : IAboutContent
     /// <param name="assembly"></param>
     /// <param name="logoSourcePath">AppDomain.CurrentDomain.BaseDirectory</param>
     /// <exception cref="ArgumentNullException"></exception>
-    public AboutContent(Assembly assembly, string logoSourcePath)
+    // ReSharper disable once UnusedMember.Global
+    public AboutContent([NotNull] Assembly assembly, [NotNull] string logoSourcePath)
     {
         _assembly = assembly ?? throw new ArgumentNullException(nameof(assembly));
         _logoSourcePath = logoSourcePath ?? throw new ArgumentNullException(nameof(logoSourcePath));
@@ -28,7 +28,7 @@ public class AboutContent : IAboutContent
     /// </summary>
     /// <param name="currentAssembly"></param>
     /// <exception cref="ArgumentNullException"></exception>
-    public AboutContent(ICurrentAssembly currentAssembly)
+    public AboutContent([NotNull] ICurrentAssembly currentAssembly)
     {
         // ReSharper disable once ConstantConditionalAccessQualifier
         _assembly = currentAssembly?.Value ?? throw new ArgumentNullException(nameof(currentAssembly));

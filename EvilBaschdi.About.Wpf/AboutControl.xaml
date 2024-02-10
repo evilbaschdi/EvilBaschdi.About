@@ -4,9 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d"
-             Foreground="Gray"
-             FontFamily="Segeo UI"
              FontSize="14"
+             Foreground="Gray"
              d:DesignHeight="460" d:DesignWidth="530">
     <Grid Margin="15">
         <Grid.RowDefinitions>

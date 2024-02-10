@@ -1,6 +1,4 @@
 ﻿using Avalonia.Media.Imaging;
-using EvilBaschdi.About.Core;
-using EvilBaschdi.About.Core.Models;
 
 namespace EvilBaschdi.About.Avalonia.Models;
 
@@ -18,8 +16,7 @@ public class AboutViewModelExtended : AboutViewModel, IAboutViewModelExtended
     public AboutViewModelExtended(IAboutContent aboutContent)
         : base(aboutContent)
     {
-        var innerAboutContent = aboutContent ?? throw new ArgumentNullException(nameof(aboutContent));
-        _aboutModel = innerAboutContent.Value;
+        _aboutModel = aboutContent.Value;
     }
 
     /// <summary>

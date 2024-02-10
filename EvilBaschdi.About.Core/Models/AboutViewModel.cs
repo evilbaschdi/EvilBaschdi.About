@@ -2,19 +2,15 @@
 
 /// <summary>
 /// </summary>
+/// <remarks>
+/// </remarks>
+/// <param name="aboutContent"></param>
+/// <exception cref="ArgumentNullException"></exception>
 // ReSharper disable once UnusedType.Global
-public class AboutViewModel : IAboutModel
+public class AboutViewModel(
+    [NotNull] IAboutContent aboutContent) : IAboutViewModel
 {
-    private readonly IAboutContent _aboutContent;
-
-    /// <summary>
-    /// </summary>
-    /// <param name="aboutContent"></param>
-    /// <exception cref="ArgumentNullException"></exception>
-    public AboutViewModel(IAboutContent aboutContent)
-    {
-        _aboutContent = aboutContent ?? throw new ArgumentNullException(nameof(aboutContent));
-    }
+    private readonly IAboutContent _aboutContent = aboutContent ?? throw new ArgumentNullException(nameof(aboutContent));
 
     /// <summary>
     /// </summary>

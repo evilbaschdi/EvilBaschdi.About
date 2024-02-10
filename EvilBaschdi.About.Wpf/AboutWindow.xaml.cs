@@ -1,10 +1,7 @@
-﻿using System.Runtime.InteropServices;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Interop;
 using System.Windows.Media;
-using EvilBaschdi.About.Core.Models;
-using EvilBaschdi.About.Wpf.Enums;
-using static EvilBaschdi.About.Wpf.Extensions.Imports;
+using EvilBaschdi.Core.Wpf;
 
 namespace EvilBaschdi.About.Wpf;
 
@@ -14,60 +11,39 @@ namespace EvilBaschdi.About.Wpf;
 // ReSharper disable once UnusedType.Global
 public partial class AboutWindow
 {
+    private readonly IApplyMicaBrush _applyMicaBrush;
+
+    /// <exception cref="ArgumentNullException"></exception>
     /// <inheritdoc />
-    public AboutWindow(IAboutModel aboutModel)
+    public AboutWindow([NotNull] IAboutViewModel aboutViewModel,
+                       [NotNull] IApplicationLayout applicationLayout,
+                       [NotNull] IApplyMicaBrush applyMicaBrush)
     {
-        if (aboutModel == null)
-        {
-            throw new ArgumentNullException(nameof(aboutModel));
-        }
+        ArgumentNullException.ThrowIfNull(aboutViewModel);
+        ArgumentNullException.ThrowIfNull(applicationLayout);
+        ArgumentNullException.ThrowIfNull(applyMicaBrush);
+        _applyMicaBrush = applyMicaBrush;
 
         InitializeComponent();
 
+        applicationLayout.RunFor((this, true, false));
+
         Loaded += AboutWindowLoaded;
-        DataContext = aboutModel;
+        DataContext = aboutViewModel;
     }
 
     // ReSharper disable once MemberCanBeMadeStatic.Local
-    private void WindowContentRendered(object sender, EventArgs e)
+    private void WindowContentRendered([NotNull] object sender, [NotNull] EventArgs e)
     {
-        // Apply Mica brush
-        UpdateStyleAttributes((HwndSource)sender);
+        ArgumentNullException.ThrowIfNull(sender);
+        ArgumentNullException.ThrowIfNull(e);
+        _applyMicaBrush.RunFor((HwndSource)sender, this);
     }
 
-    /// <summary>
-    ///     Sets Windows Color an Mica effect
-    /// </summary>
-    /// <param name="hwndSource"></param>
-    // ReSharper disable once MemberCanBePrivate.Global
-    public static void UpdateStyleAttributes(HwndSource hwndSource)
+    private void AboutWindowLoaded([NotNull] object sender, [NotNull] RoutedEventArgs e)
     {
-        var darkThemeEnabled = ShouldSystemUseDarkMode();
-        var build = Environment.OSVersion.Version.Build;
-
-        var trueValue = 0x01;
-        var falseValue = 0x00;
-
-        var mode = darkThemeEnabled ? trueValue : falseValue;
-
-        // Set dark mode before applying the material, otherwise you'll get an ugly flash when displaying the window.
-
-        _ = DwmSetWindowAttribute(hwndSource.Handle, DwmWindowAttribute.DWMWA_USE_IMMERSIVE_DARK_MODE, ref mode, Marshal.SizeOf(typeof(int)));
-
-        //before Windows 11 22H2
-        if (build < 22523)
-        {
-            _ = DwmSetWindowAttribute(hwndSource.Handle, DwmWindowAttribute.DWMWA_MICA_EFFECT, ref trueValue, Marshal.SizeOf(typeof(int)));
-        }
-        else
-        {
-            var pvAttribute = (int)DwmWindowAttribute.DWMSBT_MAINWINDOW;
-            _ = DwmSetWindowAttribute(hwndSource.Handle, DwmWindowAttribute.DWMWA_SYSTEMBACKDROP_TYPE, ref pvAttribute, Marshal.SizeOf(typeof(int)));
-        }
-    }
-
-    private void AboutWindowLoaded(object sender, RoutedEventArgs e)
-    {
+        ArgumentNullException.ThrowIfNull(sender);
+        ArgumentNullException.ThrowIfNull(e);
         // Get PresentationSource
         var presentationSource = PresentationSource.FromVisual((Visual)sender);
 

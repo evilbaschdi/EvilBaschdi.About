@@ -1,0 +1,21 @@
+﻿<Window x:Class="EvilBaschdi.About.Wpf.DummyApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Icon="b.ico"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        Title="DummyApp"
+        Height="200"
+        Width="200">
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="-1" UseAeroCaptionButtons="True" />
+    </WindowChrome.WindowChrome>
+
+    <Grid>
+        <!-- ReSharper disable UnusedMember.Global -->
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Name="AboutButton" Content="About" Click="AboutClick" />
+        </StackPanel>
+        <!-- ReSharper restore UnusedMember.Global -->
+    </Grid>
+</Window>

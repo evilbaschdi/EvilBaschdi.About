@@ -1,7 +1,7 @@
 namespace EvilBaschdi.About.Wpf;
 
 /// <summary>
-///     Interaction logic for UserControl1.xaml
+///     Interaction logic for AboutControl.xaml
 /// </summary>
 public partial class AboutControl
 {

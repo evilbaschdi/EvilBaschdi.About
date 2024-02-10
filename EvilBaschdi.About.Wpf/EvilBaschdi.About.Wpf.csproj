@@ -1,9 +1,8 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<Description>About Window WPF</Description>
-		<PackageId>EvilBaschdi.About.WPF</PackageId>
-		<TargetFrameworks>net6.0-windows;net7.0-windows</TargetFrameworks>
+		<Description>About Window Wpf</Description>
+		<PackageId>EvilBaschdi.About.Wpf</PackageId>
 		<UseWPF>true</UseWPF>
 	</PropertyGroup>
 
