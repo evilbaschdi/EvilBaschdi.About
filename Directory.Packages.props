@@ -11,7 +11,7 @@
     <PackageVersion Include="EvilBaschdi.Core.Avalonia" Version="2024.2.10.631" />
   </ItemGroup>
   <ItemGroup Condition="$(Description.Contains('Wpf'))">
-    <PackageVersion Include="EvilBaschdi.Core.Wpf" Version="2024.1.6.1116-develop" />
+    <PackageVersion Include="EvilBaschdi.Core.Wpf" Version="2024.2.10.858" />
   </ItemGroup>
   <ItemGroup Condition="$(MSBuildProjectName.EndsWith('.Tests'))">
     <PackageVersion Include="coverlet.collector" Version="6.0.0" />
