@@ -2,7 +2,6 @@
 
 	<PropertyGroup>
 		<Description>About Window Wpf</Description>
-		<PackageId>EvilBaschdi.About.Wpf</PackageId>
 		<UseWPF>true</UseWPF>
 	</PropertyGroup>
 

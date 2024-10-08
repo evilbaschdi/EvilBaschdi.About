@@ -2,7 +2,6 @@
 
 	<PropertyGroup>
 		<Description>About Window Core</Description>
-		<PackageId>EvilBaschdi.About.Core</PackageId>
 		<PackageProjectUrl>https://github.com/evilbaschdi/EvilBaschdi.CoreExtended</PackageProjectUrl>
 		<PackageTags>About Window Core</PackageTags>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>

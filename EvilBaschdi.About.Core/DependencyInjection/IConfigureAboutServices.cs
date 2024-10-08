@@ -3,6 +3,4 @@
 namespace EvilBaschdi.About.Core.DependencyInjection;
 
 /// <inheritdoc />
-public interface IConfigureAboutServices : IConfigureServiceCollection
-{
-}
+public interface IConfigureAboutServices : IConfigureServiceCollection;

@@ -1,6 +1,4 @@
 ﻿namespace EvilBaschdi.About.Core.Models;
 
 /// <inheritdoc />
-public interface IAboutViewModel : IAboutModel
-{
-}
+public interface IAboutViewModel : IAboutModel;
