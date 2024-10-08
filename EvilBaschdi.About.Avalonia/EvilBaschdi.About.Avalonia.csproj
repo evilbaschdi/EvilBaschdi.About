@@ -2,7 +2,6 @@
 
 	<PropertyGroup>
 		<Description>About Window Avalonia</Description>
-		<PackageId>EvilBaschdi.About.Avalonia</PackageId>
 	</PropertyGroup>
 
 	<ItemGroup>
