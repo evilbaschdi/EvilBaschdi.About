@@ -66,18 +66,24 @@
 		<Using Include="Xunit" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<PackageReference Include="EvilBaschdi.Core" />
-		<PackageReference Include="EvilBaschdi.DependencyInjection" />
-	</ItemGroup>
-
-	<ItemGroup Condition="$(Description.Contains('Avalonia'))">
-		<PackageReference Include="EvilBaschdi.Core.Avalonia" />
-	</ItemGroup>
-
-	<ItemGroup Condition="$(Description.Contains('Wpf'))">
-		<PackageReference Include="EvilBaschdi.Core.Wpf" />
-	</ItemGroup>
+	<Choose>
+		<When Condition="$(MSBuildProjectName.EndsWith('.Core'))">
+			<ItemGroup>
+				<PackageReference Include="EvilBaschdi.Core" />
+				<PackageReference Include="EvilBaschdi.DependencyInjection" />
+			</ItemGroup>
+		</When>
+		<When Condition="$(MSBuildProjectName.EndsWith('.Avalonia'))">
+			<ItemGroup>
+				<PackageReference Include="EvilBaschdi.Core.Avalonia" />
+			</ItemGroup>
+		</When>
+		<When Condition="$(MSBuildProjectName.EndsWith('.Wpf'))">
+			<ItemGroup>
+				<PackageReference Include="EvilBaschdi.Core.Wpf" />
+			</ItemGroup>
+		</When>
+	</Choose>
 
 	<PropertyGroup Condition="$(MSBuildProjectName.EndsWith('.Tests'))">
 		<IsPackable>false</IsPackable>
