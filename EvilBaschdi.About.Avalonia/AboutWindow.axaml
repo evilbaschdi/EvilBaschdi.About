@@ -9,7 +9,7 @@
         Background="Transparent"
         CanResize="False"
         Title="About"
-        Height="460"
+        Height="800"
         Width="530">
 
     <Panel Name="RootPanel">
