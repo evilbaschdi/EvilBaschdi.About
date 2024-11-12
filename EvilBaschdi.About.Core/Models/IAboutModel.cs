@@ -8,46 +8,41 @@ public interface IAboutModel
     /// </summary>
     // ReSharper disable once UnusedType.Global
     // ReSharper disable once UnusedMemberInSuper.Global
-    string ApplicationTitle { get; }
+    public string ApplicationTitle { get; }
 
     /// <summary>
     /// </summary>
     // ReSharper disable once UnusedType.Global
     // ReSharper disable once UnusedMemberInSuper.Global
-    string Company { get; }
+    public string Company { get; }
 
     /// <summary>
     /// </summary>
     // ReSharper disable once UnusedType.Global
     // ReSharper disable once UnusedMemberInSuper.Global
-    string Copyright { get; }
+    public string Copyright { get; }
 
     /// <summary>
     /// </summary>
     // ReSharper disable once UnusedType.Global
     // ReSharper disable once UnusedMemberInSuper.Global
-    string Description { get; }
+    public string Description { get; }
 
     /// <summary>
     /// </summary>
     // ReSharper disable once UnusedType.Global
     // ReSharper disable once UnusedMemberInSuper.Global
-    string LogoSourcePath { get; }
-
-    /// <summary>
-    /// </summary>
-    // ReSharper disable once PropertyCanBeMadeInitOnly.Global
-    string ReferencedAssemblies { get; }
+    public string LogoSourcePath { get; }
 
     /// <summary>
     /// </summary>
     // ReSharper disable once UnusedType.Global
     // ReSharper disable once UnusedMemberInSuper.Global
-    string Runtime { get; }
+    public string Runtime { get; }
 
     /// <summary>
     /// </summary>
     // ReSharper disable once UnusedType.Global
     // ReSharper disable once UnusedMemberInSuper.Global
-    string Version { get; }
+    public string Version { get; }
 }

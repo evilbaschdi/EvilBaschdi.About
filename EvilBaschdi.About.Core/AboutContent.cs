@@ -1,6 +1,5 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
-using System.Text;
 
 namespace EvilBaschdi.About.Core;
 
@@ -48,29 +47,20 @@ public class AboutContent : IAboutContent
                 ? _assembly.GetCustomAttributes<AssemblyProductAttribute>().FirstOrDefault()?.Product
                 : _assembly.GetCustomAttributes<AssemblyTitleAttribute>().FirstOrDefault()?.Title;
 
-            var referencedAssemblies = _assembly.GetReferencedAssemblies();
-            var nuGetPackages = new StringBuilder();
+            var config = new AboutModel
+                         {
+                             ApplicationTitle = title,
+                             Copyright = _assembly.GetCustomAttributes<AssemblyCopyrightAttribute>().FirstOrDefault()?.Copyright,
+                             Company = _assembly.GetCustomAttributes<AssemblyCompanyAttribute>().FirstOrDefault()?.Company,
+                             Description = _assembly.GetCustomAttributes<AssemblyDescriptionAttribute>().FirstOrDefault()
+                                                    ?.Description,
+                             Version = _assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()
+                                                ?.InformationalVersion.Split('+').FirstOrDefault(),
+                             Runtime = $"{RuntimeInformation.FrameworkDescription} ({RuntimeInformation.ProcessArchitecture} on {RuntimeInformation.OSArchitecture})".ToLower(),
+                             LogoSourcePath = !string.IsNullOrWhiteSpace(_logoSourcePath) ? _logoSourcePath : string.Empty,
+                         };
 
-            foreach (var assembly in referencedAssemblies.OrderBy(a => a.Name) /*.Where(a => a.Name != null && a.Name.StartsWith("EvilBaschdi"))*/)
-            {
-                nuGetPackages.AppendLine($"{assembly.Name}: {assembly.Version}");
-            }
-
-            var aboutModel = new AboutModel
-                             {
-                                 ApplicationTitle = title,
-                                 Copyright = _assembly.GetCustomAttributes<AssemblyCopyrightAttribute>().FirstOrDefault()?.Copyright,
-                                 Company = _assembly.GetCustomAttributes<AssemblyCompanyAttribute>().FirstOrDefault()?.Company,
-                                 Description = _assembly.GetCustomAttributes<AssemblyDescriptionAttribute>().FirstOrDefault()
-                                                        ?.Description,
-                                 Version = _assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()
-                                                    ?.InformationalVersion.Split('+').FirstOrDefault(),
-                                 Runtime = $"{RuntimeInformation.FrameworkDescription} ({RuntimeInformation.ProcessArchitecture} on {RuntimeInformation.OSArchitecture})".ToLower(),
-                                 LogoSourcePath = !string.IsNullOrWhiteSpace(_logoSourcePath) ? _logoSourcePath : string.Empty,
-                                 ReferencedAssemblies = nuGetPackages.ToString(),
-                             };
-
-            return aboutModel;
+            return config;
         }
     }
 }

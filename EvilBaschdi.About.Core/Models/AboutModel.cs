@@ -32,11 +32,6 @@ public class AboutModel : IAboutModel
     /// <summary>
     /// </summary>
     // ReSharper disable once PropertyCanBeMadeInitOnly.Global
-    public string ReferencedAssemblies { get; set; }
-
-    /// <summary>
-    /// </summary>
-    // ReSharper disable once PropertyCanBeMadeInitOnly.Global
     public string Runtime { get; set; }
 
     /// <summary>
