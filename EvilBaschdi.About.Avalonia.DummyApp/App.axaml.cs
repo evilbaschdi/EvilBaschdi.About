@@ -2,7 +2,6 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using EvilBaschdi.About.Avalonia.DependencyInjection;
-using EvilBaschdi.About.Core.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace EvilBaschdi.About.Avalonia.DummyApp;
@@ -26,8 +25,8 @@ public class App : Application
     public override void OnFrameworkInitializationCompleted()
     {
         IServiceCollection serviceCollection = new ServiceCollection();
-        IConfigureAboutServices configureAboutServices = new ConfigureAboutServices();
-        configureAboutServices.RunFor(serviceCollection);
+
+        serviceCollection.AddAboutServices();
 
         ServiceProvider = serviceCollection.BuildServiceProvider();
 
