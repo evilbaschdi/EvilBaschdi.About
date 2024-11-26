@@ -1,5 +1,4 @@
-﻿using EvilBaschdi.About.Core.DependencyInjection;
-using EvilBaschdi.About.Wpf.DependencyInjection;
+﻿using EvilBaschdi.About.Wpf.DependencyInjection;
 using EvilBaschdi.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -15,9 +14,8 @@ public class ConfigureDelegateForConfigureServices : IConfigureDelegateForConfig
         ArgumentNullException.ThrowIfNull(_);
         ArgumentNullException.ThrowIfNull(serviceCollection);
 
-        IConfigureAboutServices configureAboutServices = new ConfigureAboutServices();
-        configureAboutServices.RunFor(serviceCollection);
+        serviceCollection.AddAboutServices();
 
-        serviceCollection.AddTransient(typeof(MainWindow));
+        serviceCollection.AddTransient<MainWindow>();
     }
 }
