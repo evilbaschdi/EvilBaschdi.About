@@ -27,7 +27,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\EvilBaschdi.About.Wpf\EvilBaschdi.About.Wpf.csproj" />
+		<ProjectReference Include="..\EvilBaschdi.About.Wpf\EvilBaschdi.About.Wpf.csproj" />
 	</ItemGroup>
 
 </Project>
