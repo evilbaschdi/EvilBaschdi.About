@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# 17
+# Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvilBaschdi.About.Core", "EvilBaschdi.About.Core\EvilBaschdi.About.Core.csproj", "{3CFB9F51-72A3-41BD-8382-EDA3F9A840AB}"
@@ -32,6 +32,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvilBaschdi.About.Core.Tests", "EvilBaschdi.About.Core.Tests\EvilBaschdi.About.Core.Tests.csproj", "{5051A9B7-509E-45DE-9BDA-6B82C999AE83}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvilBaschdi.About.Wpf.Tests", "EvilBaschdi.About.Wpf.Tests\EvilBaschdi.About.Wpf.Tests.csproj", "{C8E61218-72FE-44E8-A996-EA2B606107DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvilBaschdi.About.Terminal", "EvilBaschdi.About.Terminal\EvilBaschdi.About.Terminal.csproj", "{92FB96AE-9121-469B-BF21-7F17461483D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvilBaschdi.About.Terminal.DummyApp", "EvilBaschdi.About.Terminal.DummyApp\EvilBaschdi.About.Terminal.DummyApp.csproj", "{B46D37F6-1BAF-46AB-B9A7-A23FD52A540B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +75,14 @@ Global
 		{C8E61218-72FE-44E8-A996-EA2B606107DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8E61218-72FE-44E8-A996-EA2B606107DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8E61218-72FE-44E8-A996-EA2B606107DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92FB96AE-9121-469B-BF21-7F17461483D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92FB96AE-9121-469B-BF21-7F17461483D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92FB96AE-9121-469B-BF21-7F17461483D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92FB96AE-9121-469B-BF21-7F17461483D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B46D37F6-1BAF-46AB-B9A7-A23FD52A540B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B46D37F6-1BAF-46AB-B9A7-A23FD52A540B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B46D37F6-1BAF-46AB-B9A7-A23FD52A540B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B46D37F6-1BAF-46AB-B9A7-A23FD52A540B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,6 +93,7 @@ Global
 		{7AFED102-C43F-462A-AD19-3A6D24CE64C0} = {02FD2ACD-71DF-48AC-BD0E-772F1124120B}
 		{5051A9B7-509E-45DE-9BDA-6B82C999AE83} = {02FD2ACD-71DF-48AC-BD0E-772F1124120B}
 		{C8E61218-72FE-44E8-A996-EA2B606107DB} = {02FD2ACD-71DF-48AC-BD0E-772F1124120B}
+		{B46D37F6-1BAF-46AB-B9A7-A23FD52A540B} = {8A64A277-A19F-403B-BA74-82565286446B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1A9F5560-9B19-4C79-9E10-46FD48F3E7A0}
