@@ -17,7 +17,8 @@
 		<PackageProjectUrl>https://github.com/evilbaschdi/EvilBaschdi.About</PackageProjectUrl>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<RepositoryUrl>https://github.com/evilbaschdi/EvilBaschdi.About</RepositoryUrl>
-		<SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
+		<IncludeSymbols>True</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 		<VersionPrefix>$([System.DateTime]::UtcNow.ToString(yyyy.M.d.Hmm))</VersionPrefix>
 	</PropertyGroup>
 
@@ -81,6 +82,11 @@
 		<When Condition="$(MSBuildProjectName.EndsWith('.Wpf'))">
 			<ItemGroup>
 				<PackageReference Include="EvilBaschdi.Core.Wpf" />
+			</ItemGroup>
+		</When>
+		<When Condition="$(MSBuildProjectName.EndsWith('.Terminal'))">
+			<ItemGroup>
+				<PackageReference Include="Spectre.Console" />
 			</ItemGroup>
 		</When>
 	</Choose>

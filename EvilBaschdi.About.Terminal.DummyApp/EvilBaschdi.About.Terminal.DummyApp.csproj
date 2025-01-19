@@ -1,21 +1,20 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<ApplicationIcon>b.ico</ApplicationIcon>
 		<Authors>Sebastian Walter</Authors>
 		<Company>evilbaschdi (Sebastian Walter)</Company>
 		<Copyright>Copyright © 2015 - $([System.DateTime]::UtcNow.ToString(yyyy)) evilbaschdi</Copyright>
-		<Description>DummyApp for EvilBaschdi.About.Wpf</Description>
+		<Description>DummyApp for EvilBaschdi.About.Terminal</Description>
 		<!-- ReSharper disable once UnknownProperty -->
 		<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(MSBuildProjectName).xml</DocumentationFile>
 		<EnableNETAnalyzers>true</EnableNETAnalyzers>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<IsPackable>false</IsPackable>
 		<LangVersion>preview</LangVersion>
-		<OutputType>WinExe</OutputType>
-		<Product>EvilBaschdi.About.Wpf DummyApp</Product>
-		<Title>EvilBaschdi.About.Wpf.DummyApp</Title>
-		<UseWPF>true</UseWPF>
+		<OutputType>Exe</OutputType>
+		<Product>EvilBaschdi.About.Terminal DummyApp</Product>
+		<Title>EvilBaschdi.About.Terminal.DummyApp</Title>
 		<Version>$([System.DateTime]::UtcNow.ToString(yyyy.M.d.Hmm))</Version>
 	</PropertyGroup>
 
@@ -27,7 +26,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\EvilBaschdi.About.Wpf\EvilBaschdi.About.Wpf.csproj" />
+		<ProjectReference Include="..\EvilBaschdi.About.Terminal\EvilBaschdi.About.Terminal.csproj" />
 	</ItemGroup>
 
 </Project>
