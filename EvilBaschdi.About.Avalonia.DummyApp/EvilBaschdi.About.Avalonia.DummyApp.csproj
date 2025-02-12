@@ -11,7 +11,7 @@
 		<IsPackable>false</IsPackable>
 		<Title>EvilBaschdi.Avalonia.DummyApp</Title>
 		<Description>TestUi for EvilBaschdi.About.Avalonia</Description>
-		<Version>$([System.DateTime]::UtcNow.ToString(yyyy.M.d.Hmm))</Version>
+		<Version>$([System.DateTime]::UtcNow.ToString(yyyy.M.d.H))</Version>
 	</PropertyGroup>
 
 	<ItemGroup>
