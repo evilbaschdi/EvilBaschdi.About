@@ -15,7 +15,7 @@
 		<OutputType>Exe</OutputType>
 		<Product>EvilBaschdi.About.Terminal DummyApp</Product>
 		<Title>EvilBaschdi.About.Terminal.DummyApp</Title>
-		<Version>$([System.DateTime]::UtcNow.ToString(yyyy.M.d.Hmm))</Version>
+		<Version>$([System.DateTime]::UtcNow.ToString(yyyy.M.d.H))</Version>
 	</PropertyGroup>
 
 	<ItemGroup>

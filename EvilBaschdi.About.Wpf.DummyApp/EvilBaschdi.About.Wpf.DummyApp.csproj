@@ -16,7 +16,7 @@
 		<Product>EvilBaschdi.About.Wpf DummyApp</Product>
 		<Title>EvilBaschdi.About.Wpf.DummyApp</Title>
 		<UseWPF>true</UseWPF>
-		<Version>$([System.DateTime]::UtcNow.ToString(yyyy.M.d.Hmm))</Version>
+		<Version>$([System.DateTime]::UtcNow.ToString(yyyy.M.d.H))</Version>
 	</PropertyGroup>
 
 	<ItemGroup>
