@@ -12,7 +12,7 @@
     </When>
     <When Condition="$(MSBuildProjectName.EndsWith('.Avalonia'))">
       <ItemGroup>
-        <PackageVersion Include="EvilBaschdi.Core.Avalonia" Version="2024.12.19.933" />
+        <PackageVersion Include="EvilBaschdi.Core.Avalonia" Version="2025.2.28.15" />
       </ItemGroup>
     </When>
     <When Condition="$(MSBuildProjectName.EndsWith('.Wpf'))">
@@ -28,7 +28,7 @@
     <When Condition="$(MSBuildProjectName.EndsWith('.Tests'))">
       <ItemGroup>
         <PackageVersion Include="coverlet.collector" Version="6.0.4" />
-        <PackageVersion Include="EvilBaschdi.Testing" Version="2025.2.10.14" />
+        <PackageVersion Include="EvilBaschdi.Testing" Version="2025.2.21.15" />
         <PackageVersion Include="FluentAssertions.Analyzers" Version="0.34.1" />
         <PackageVersion Include="Meziantou.FluentAssertionsAnalyzers" Version="1.0.21" />
         <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
