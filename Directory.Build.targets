@@ -3,6 +3,7 @@
 	<Choose>
 		<When Condition="$(MSBuildProjectName.Contains('Wpf'))">
 			<PropertyGroup>
+				<EnableWindowsTargeting>true</EnableWindowsTargeting>
 				<TargetFrameworks>net8.0-windows;net9.0-windows</TargetFrameworks>
 			</PropertyGroup>
 		</When>
