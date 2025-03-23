@@ -7,18 +7,18 @@
     <!-- #region Project Libs -->
     <When Condition="$(MSBuildProjectName.EndsWith('.Core'))">
       <ItemGroup>
-        <PackageVersion Include="EvilBaschdi.Core" Version="2024.10.31.739" />
-        <PackageVersion Include="EvilBaschdi.DependencyInjection" Version="2025.3.11.20" />
+        <PackageVersion Include="EvilBaschdi.Core" Version="2025.3.23.8" />
+        <PackageVersion Include="EvilBaschdi.DependencyInjection" Version="2025.3.23.9" />
       </ItemGroup>
     </When>
     <When Condition="$(MSBuildProjectName.EndsWith('.Avalonia'))">
       <ItemGroup>
-        <PackageVersion Include="EvilBaschdi.Core.Avalonia" Version="2025.3.15.9" />
+        <PackageVersion Include="EvilBaschdi.Core.Avalonia" Version="2025.3.23.9" />
       </ItemGroup>
     </When>
     <When Condition="$(MSBuildProjectName.EndsWith('.Wpf'))">
       <ItemGroup>
-        <PackageVersion Include="EvilBaschdi.Core.Wpf" Version="2024.11.26.1723" />
+        <PackageVersion Include="EvilBaschdi.Core.Wpf" Version="2025.3.23.9" />
       </ItemGroup>
     </When>
     <When Condition="$(MSBuildProjectName.EndsWith('.Terminal'))">
