@@ -13,12 +13,12 @@
     </When>
     <When Condition="$(MSBuildProjectName.EndsWith('.Avalonia'))">
       <ItemGroup>
-        <PackageVersion Include="EvilBaschdi.Core.Avalonia" Version="2025.3.23.9" />
+        <PackageVersion Include="EvilBaschdi.Core.Avalonia" Version="2025.3.29.14" />
       </ItemGroup>
     </When>
     <When Condition="$(MSBuildProjectName.EndsWith('.Wpf'))">
       <ItemGroup>
-        <PackageVersion Include="EvilBaschdi.Core.Wpf" Version="2025.3.23.9" />
+        <PackageVersion Include="EvilBaschdi.Core.Wpf" Version="2025.4.1.19" />
       </ItemGroup>
     </When>
     <When Condition="$(MSBuildProjectName.EndsWith('.Terminal'))">
