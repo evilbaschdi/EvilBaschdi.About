@@ -1,5 +1,5 @@
 ﻿using EvilBaschdi.About.Wpf.DependencyInjection;
-using EvilBaschdi.DependencyInjection;
+using EvilBaschdi.Core.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 

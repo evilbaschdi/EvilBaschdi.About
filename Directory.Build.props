@@ -75,7 +75,7 @@
 		<When Condition="$(MSBuildProjectName.EndsWith('.Core'))">
 			<ItemGroup>
 				<PackageReference Include="EvilBaschdi.Core" />
-				<PackageReference Include="EvilBaschdi.DependencyInjection" />
+				<PackageReference Include="EvilBaschdi.Core.DependencyInjection" />
 			</ItemGroup>
 		</When>
 		<When Condition="$(MSBuildProjectName.EndsWith('.Avalonia'))">

@@ -7,18 +7,18 @@
     <!-- #region Project Libs -->
     <When Condition="$(MSBuildProjectName.EndsWith('.Core'))">
       <ItemGroup>
-        <PackageVersion Include="EvilBaschdi.Core" Version="2025.4.21.7" />
-        <PackageVersion Include="EvilBaschdi.DependencyInjection" Version="2025.4.9.16" />
+        <PackageVersion Include="EvilBaschdi.Core" Version="2025.5.11.10-develop" />
+        <PackageVersion Include="EvilBaschdi.Core.DependencyInjection" Version="2025.5.11.18-develop" />
       </ItemGroup>
     </When>
     <When Condition="$(MSBuildProjectName.EndsWith('.Avalonia'))">
       <ItemGroup>
-        <PackageVersion Include="EvilBaschdi.Core.Avalonia" Version="2025.4.21.8" />
+        <PackageVersion Include="EvilBaschdi.Core.Avalonia" Version="2025.5.11.18-develop" />
       </ItemGroup>
     </When>
     <When Condition="$(MSBuildProjectName.EndsWith('.Wpf'))">
       <ItemGroup>
-        <PackageVersion Include="EvilBaschdi.Core.Wpf" Version="2025.4.21.8" />
+        <PackageVersion Include="EvilBaschdi.Core.Wpf" Version="2025.5.11.18-develop" />
       </ItemGroup>
     </When>
     <When Condition="$(MSBuildProjectName.EndsWith('.Terminal'))">
@@ -31,14 +31,14 @@
     <When Condition="$(MSBuildProjectName.EndsWith('.Tests'))">
       <ItemGroup>
         <PackageVersion Include="coverlet.collector" Version="6.0.4" />
-        <PackageVersion Include="EvilBaschdi.Testing" Version="2025.4.6.7" />
+        <PackageVersion Include="EvilBaschdi.Testing" Version="2025.5.4.6" />
         <PackageVersion Include="FluentAssertions.Analyzers" Version="0.34.1" />
         <PackageVersion Include="Meziantou.FluentAssertionsAnalyzers" Version="1.0.21" />
         <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
         <PackageVersion Include="NSubstitute.Analyzers.CSharp" Version="1.0.17" />
-        <PackageVersion Include="xunit.v3" Version="2.0.1" />
+        <PackageVersion Include="xunit.v3" Version="2.0.2" />
         <PackageVersion Include="xunit.analyzers" Version="1.21.0" />
-        <PackageVersion Include="xunit.runner.visualstudio" Version="3.0.2" />
+        <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.0" />
       </ItemGroup>
     </When>
     <!-- #endregion Unit Test Libs -->

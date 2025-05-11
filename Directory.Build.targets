@@ -14,11 +14,25 @@
 		</Otherwise>
 	</Choose>
 
-	<ItemGroup>
-		<Compile Update="**\*.cs">
-			<DependentUpon>$([System.String]::Copy(I%(Filename).cs))</DependentUpon>
-		</Compile>
-	</ItemGroup>
+	<Choose>
+		<When Condition="$(MSBuildProjectName.Contains('Core')) Or $(MSBuildProjectName.Contains('Terminal'))">
+			<ItemGroup>
+				<Compile Update="**\*.cs">
+					<DependentUpon>$([System.String]::Copy(I%(Filename).cs).Replace('Cached',''))</DependentUpon>
+				</Compile>
+			</ItemGroup>
+		</When>
+		<Otherwise>
+			<ItemGroup>
+				<Compile Update="Models\*.cs">
+					<DependentUpon>$([System.String]::Copy(I%(Filename).cs).Replace('Cached',''))</DependentUpon>
+				</Compile>
+				<Compile Update="Models\*\*.cs">
+					<DependentUpon>$([System.String]::Copy(I%(Filename).cs).Replace('Cached',''))</DependentUpon>
+				</Compile>
+			</ItemGroup>
+		</Otherwise>
+	</Choose>
 
 	<ItemGroup>
 		<Compile Remove="TestResults\**" />

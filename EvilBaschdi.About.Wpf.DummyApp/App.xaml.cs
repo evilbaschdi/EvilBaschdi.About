@@ -1,5 +1,5 @@
 ﻿using System.Windows;
-using EvilBaschdi.DependencyInjection;
+using EvilBaschdi.Core.DependencyInjection;
 
 namespace EvilBaschdi.About.Wpf.DummyApp;
 
@@ -36,7 +36,7 @@ public partial class App : Application
     {
         ArgumentNullException.ThrowIfNull(e);
 
-        await _handleAppExit.Value();
+        await _handleAppExit.RunAsync();
 
         base.OnExit(e);
     }
