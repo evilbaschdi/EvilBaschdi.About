@@ -14,7 +14,7 @@
 		</Otherwise>
 	</Choose>
 
-	<Choose>
+	<!--<Choose>
 		<When Condition="$(MSBuildProjectName.Contains('Core')) Or $(MSBuildProjectName.Contains('Terminal'))">
 			<ItemGroup>
 				<Compile Update="**\*.cs">
@@ -32,7 +32,7 @@
 				</Compile>
 			</ItemGroup>
 		</Otherwise>
-	</Choose>
+	</Choose>-->
 
 	<ItemGroup>
 		<Compile Remove="TestResults\**" />
