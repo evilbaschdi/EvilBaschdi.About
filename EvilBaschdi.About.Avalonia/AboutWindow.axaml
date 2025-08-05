@@ -5,8 +5,6 @@
         xmlns:about="clr-namespace:EvilBaschdi.About.Avalonia"
         mc:Ignorable="d"
         x:Class="EvilBaschdi.About.Avalonia.AboutWindow"
-        TransparencyLevelHint="Mica"
-        Background="Transparent"
         CanResize="False"
         Title="About"
         Height="460"

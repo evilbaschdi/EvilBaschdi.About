@@ -4,11 +4,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450" Width="800" Height="450"
         x:Class="EvilBaschdi.About.Avalonia.DummyApp.MainWindow"
-        Icon="/Assets/b.ico"
-        TransparencyLevelHint="Mica"
-        Background="Transparent"
-        CanResize="False"
-        Title="EvilBaschdi.Avalonia.DummyApp.MainWindow">
+        Icon="/Assets/b.ico" CanResize="False" Title="EvilBaschdi.Avalonia.DummyApp.MainWindow">
 
     <Panel Name="RootPanel">
         <ExperimentalAcrylicBorder IsHitTestVisible="False" Name="AcrylicBorder">
