@@ -7,18 +7,18 @@
     <!-- #region Project Libs -->
     <When Condition="$(MSBuildProjectName.EndsWith('.Core'))">
       <ItemGroup>
-        <PackageVersion Include="EvilBaschdi.Core" Version="2025.9.10.16-develop" />
-        <PackageVersion Include="EvilBaschdi.Core.DependencyInjection" Version="2025.9.10.16-develop" />
+        <PackageVersion Include="EvilBaschdi.Core" Version="2025.9.16.16" />
+        <PackageVersion Include="EvilBaschdi.Core.DependencyInjection" Version="2025.9.16.16" />
       </ItemGroup>
     </When>
     <When Condition="$(MSBuildProjectName.EndsWith('.Avalonia'))">
       <ItemGroup>
-        <PackageVersion Include="EvilBaschdi.Core.Avalonia" Version="2025.9.10.17-develop" />
+        <PackageVersion Include="EvilBaschdi.Core.Avalonia" Version="2025.9.16.16" />
       </ItemGroup>
     </When>
     <When Condition="$(MSBuildProjectName.EndsWith('.Wpf'))">
       <ItemGroup>
-        <PackageVersion Include="EvilBaschdi.Core.Wpf" Version="2025.9.10.17-develop" />
+        <PackageVersion Include="EvilBaschdi.Core.Wpf" Version="2025.9.16.16" />
       </ItemGroup>
     </When>
     <When Condition="$(MSBuildProjectName.EndsWith('.Terminal'))">
@@ -31,7 +31,7 @@
     <When Condition="$(MSBuildProjectName.EndsWith('.Tests'))">
       <ItemGroup>
         <PackageVersion Include="coverlet.collector" Version="6.0.4" />
-        <PackageVersion Include="EvilBaschdi.Testing" Version="2025.9.10.16-develop" />
+        <PackageVersion Include="EvilBaschdi.Testing" Version="2025.9.16.16" />
         <PackageVersion Include="FluentAssertions.Analyzers" Version="0.34.1" />
         <PackageVersion Include="Meziantou.FluentAssertionsAnalyzers" Version="1.0.22" />
         <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
