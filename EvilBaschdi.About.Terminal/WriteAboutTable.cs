@@ -4,26 +4,31 @@ namespace EvilBaschdi.About.Terminal;
 
 /// <inheritdoc />
 public class WriteAboutTable(
-    [NotNull] IAboutViewModel aboutViewModel) : IWriteAboutTable
+    [NotNull] IAboutViewModel aboutViewModel,
+    [NotNull] IAccentColorHelper accentColorHelper) : IWriteAboutTable
 {
     private readonly IAboutViewModel _aboutViewModel = aboutViewModel ?? throw new ArgumentNullException(nameof(aboutViewModel));
+    private readonly IAccentColorHelper _accentColorHelper = accentColorHelper ?? throw new ArgumentNullException(nameof(accentColorHelper));
 
     /// <inheritdoc />
     public void Run()
     {
+        var color = _accentColorHelper.SpectreConsoleColor;
+        var markup = color.ToMarkup();
+
         var aboutTable = new Table()
                          .Title("About")
                          .Centered()
                          .Border(TableBorder.Square)
-                         .BorderColor(Color.GreenYellow)
+                         .BorderColor(color)
                          .AddColumn(new("[u]Property[/]"))
                          .AddColumn(new("[u]Value[/]"));
 
-        aboutTable.AddRow("[white]ApplicationTitle[/]", $"[white]{_aboutViewModel.ApplicationTitle}[/]");
-        aboutTable.AddRow("[white]Version[/]", $"[white]{_aboutViewModel.Version}[/]");
-        aboutTable.AddRow("[white]Runtime[/]", $"[white]{_aboutViewModel.Runtime}[/]");
-        aboutTable.AddRow("[white]Copyright[/]", $"[white]{_aboutViewModel.Copyright}[/]");
-        aboutTable.AddRow("[white]Description[/]", $"[white]{_aboutViewModel.Description}[/]");
+        aboutTable.AddRow($"[{markup}]ApplicationTitle[/]", $"[white]{_aboutViewModel.ApplicationTitle}[/]");
+        aboutTable.AddRow($"[{markup}]Version[/]", $"[white]{_aboutViewModel.Version}[/]");
+        aboutTable.AddRow($"[{markup}]Runtime[/]", $"[white]{_aboutViewModel.Runtime}[/]");
+        aboutTable.AddRow($"[{markup}]Copyright[/]", $"[white]{_aboutViewModel.Copyright}[/]");
+        aboutTable.AddRow($"[{markup}]Description[/]", $"[white]{_aboutViewModel.Description}[/]");
 
         AnsiConsole.Write(aboutTable);
     }

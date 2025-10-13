@@ -12,7 +12,7 @@ public static class ConfigureAboutServices
 
         services.AddSingleton<IAboutContent, AboutContent>();
         services.AddSingleton<IAboutViewModel, AboutViewModel>();
-
         services.AddSingleton<IWriteAboutTable, WriteAboutTable>();
+        services.AddSingleton<IAccentColorHelper, AccentColorHelper>();
     }
 }
