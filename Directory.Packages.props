@@ -8,7 +8,7 @@
     <When Condition="$(MSBuildProjectName.EndsWith('.Core'))">
       <ItemGroup>
         <PackageVersion Include="EvilBaschdi.Core" Version="2025.9.16.16" />
-        <PackageVersion Include="EvilBaschdi.Core.DependencyInjection" Version="2025.9.16.16" />
+        <PackageVersion Include="EvilBaschdi.Core.DependencyInjection" Version="2025.10.15.5" />
       </ItemGroup>
     </When>
     <When Condition="$(MSBuildProjectName.EndsWith('.Avalonia'))">
@@ -18,7 +18,7 @@
     </When>
     <When Condition="$(MSBuildProjectName.EndsWith('.Wpf'))">
       <ItemGroup>
-        <PackageVersion Include="EvilBaschdi.Core.Wpf" Version="2025.9.16.16" />
+        <PackageVersion Include="EvilBaschdi.Core.Wpf" Version="2025.10.16.16" />
       </ItemGroup>
     </When>
     <When Condition="$(MSBuildProjectName.EndsWith('.Terminal'))">
