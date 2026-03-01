@@ -33,10 +33,7 @@ public partial class MainWindow
         var presentationSource = PresentationSource.FromVisual((Visual)sender);
 
         // Subscribe to PresentationSource's ContentRendered event
-        if (presentationSource != null)
-        {
-            presentationSource.ContentRendered += WindowContentRendered;
-        }
+        presentationSource?.ContentRendered += WindowContentRendered;
     }
 
     private void AboutClick(object sender, RoutedEventArgs e)

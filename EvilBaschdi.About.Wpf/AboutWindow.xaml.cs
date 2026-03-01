@@ -48,9 +48,6 @@ public partial class AboutWindow
         var presentationSource = PresentationSource.FromVisual((Visual)sender);
 
         // Subscribe to PresentationSource's ContentRendered event
-        if (presentationSource != null)
-        {
-            presentationSource.ContentRendered += WindowContentRendered;
-        }
+        presentationSource?.ContentRendered += WindowContentRendered;
     }
 }

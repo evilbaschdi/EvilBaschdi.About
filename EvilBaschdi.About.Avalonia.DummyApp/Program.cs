@@ -1,4 +1,5 @@
 using Avalonia;
+using EvilBaschdi.About.Avalonia.DependencyInjection;
 using EvilBaschdi.Core.Avalonia;
 
 namespace EvilBaschdi.About.Avalonia.DummyApp;
@@ -13,8 +14,8 @@ internal class Program
     public static void Main(string[] args) => BuildAvaloniaApp()
         .StartWithClassicDesktopLifetime(args);
 
-    // Avalonia configuration, don't remove; also used by visual designer.
     // ReSharper disable once MemberCanBePrivate.Global
-    public static AppBuilder BuildAvaloniaApp()
-        => new AppBuilderImplementation<App>().Value;
+    public static AppBuilder BuildAvaloniaApp() =>
+        new AppBuilderImplementationToUseReactiveUIWithMicrosoftDependencyResolver<App>().ValueFor(serviceCollection => { serviceCollection.AddAboutServices(); }
+        );
 }

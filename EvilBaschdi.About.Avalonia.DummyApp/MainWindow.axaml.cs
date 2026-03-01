@@ -1,7 +1,6 @@
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using EvilBaschdi.Core.Avalonia;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace EvilBaschdi.About.Avalonia.DummyApp;
 
@@ -21,10 +20,10 @@ public partial class MainWindow : Window
 
     private void ApplyLayout()
     {
-        _handleOsDependentTitleBar = App.ServiceProvider?.GetRequiredService<IHandleOsDependentTitleBar>();
+        _handleOsDependentTitleBar = ApplicationServices.GetRequiredService<IHandleOsDependentTitleBar>();
         _handleOsDependentTitleBar?.RunFor(this);
 
-        var applicationLayout = App.ServiceProvider?.GetRequiredService<IApplicationLayout>();
+        var applicationLayout = ApplicationServices.GetRequiredService<IApplicationLayout>();
         applicationLayout?.RunFor((this, true, false));
     }
 
@@ -33,7 +32,7 @@ public partial class MainWindow : Window
     private void AboutClick(object sender, RoutedEventArgs e)
         // ReSharper restore UnusedParameter.Local
     {
-        var aboutWindow = App.ServiceProvider.GetRequiredService<AboutWindow>();
+        var aboutWindow = ApplicationServices.GetRequiredService<AboutWindow>();
         aboutWindow.ShowDialog(this);
     }
 }

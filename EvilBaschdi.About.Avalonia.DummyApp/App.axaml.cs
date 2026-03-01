@@ -1,8 +1,6 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using EvilBaschdi.About.Avalonia.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace EvilBaschdi.About.Avalonia.DummyApp;
 
@@ -15,21 +13,9 @@ public class App : Application
         AvaloniaXamlLoader.Load(this);
     }
 
-    /// <summary>
-    ///     ServiceProvider for DependencyInjection
-    /// </summary>
-    // ReSharper disable once MemberCanBePrivate.Global
-    public static IServiceProvider ServiceProvider { get; set; }
-
     /// <inheritdoc />
     public override void OnFrameworkInitializationCompleted()
     {
-        IServiceCollection serviceCollection = new ServiceCollection();
-
-        serviceCollection.AddAboutServices();
-
-        ServiceProvider = serviceCollection.BuildServiceProvider();
-
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
             desktop.MainWindow = new MainWindow();

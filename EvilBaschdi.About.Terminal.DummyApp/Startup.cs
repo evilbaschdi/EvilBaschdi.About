@@ -16,7 +16,7 @@ public class Startup : IStartup
 
             serviceCollection.AddAboutServices();
 
-            serviceCollection.AddSingleton<ICurrentAssembly, CurrentAssembly>(_ => new CurrentAssembly(Assembly.GetExecutingAssembly()));
+            serviceCollection.AddSingleton<ICurrentAssembly, CurrentAssembly>(_ => new(Assembly.GetExecutingAssembly()));
 
             return serviceCollection.BuildServiceProvider();
         }
