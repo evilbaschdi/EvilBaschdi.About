@@ -18,7 +18,7 @@ public class WriteAboutTable(
 
         var aboutTable = new Table()
                          .Title("About")
-                         .Centered()
+                         //.Centered()
                          .Border(TableBorder.Square)
                          .BorderColor(color)
                          .AddColumn(new("[u]Property[/]"))

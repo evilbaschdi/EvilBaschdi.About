@@ -48,8 +48,6 @@
 		<IsTestProject>true</IsTestProject>
 		<NoWarn>1701;1702</NoWarn>
 		<OutputType>Exe</OutputType>
-		<!--<IsTestingPlatformApplication>false</IsTestingPlatformApplication>
-		<TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>-->
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -95,15 +93,10 @@
 		</When>
 	</Choose>
 
-	<PropertyGroup Condition="$(MSBuildProjectName.EndsWith('.Tests'))">
-		<IsPackable>false</IsPackable>
-		<IsTestProject>true</IsTestProject>
-	</PropertyGroup>
-
 	<!-- ReSharper disable once UnknownProperty -->
 	<ItemGroup Condition="$(MSBuildProjectName.EndsWith('.Tests'))">
 		<PackageReference Include="EvilBaschdi.Testing" />
-		<PackageReference Include="xunit.v3" />
+		<PackageReference Include="xunit.v3.mtp-v2" />
 		<PackageReference Include="Microsoft.NET.Test.Sdk" />
 		<PackageReference Include="coverlet.collector">
 			<PrivateAssets>all</PrivateAssets>

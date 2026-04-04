@@ -1,6 +1,8 @@
 using Avalonia;
 using EvilBaschdi.About.Avalonia.DependencyInjection;
+using EvilBaschdi.About.Avalonia.DummyApp.ViewModels;
 using EvilBaschdi.Core.Avalonia;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace EvilBaschdi.About.Avalonia.DummyApp;
 
@@ -16,6 +18,10 @@ internal class Program
 
     // ReSharper disable once MemberCanBePrivate.Global
     public static AppBuilder BuildAvaloniaApp() =>
-        new AppBuilderImplementationToUseReactiveUIWithMicrosoftDependencyResolver<App>().ValueFor(serviceCollection => { serviceCollection.AddAboutServices(); }
+        new AppBuilderImplementationToUseReactiveUIWithMicrosoftDependencyResolver<App>().ValueFor(serviceCollection =>
+                                                                                                   {
+                                                                                                       serviceCollection.AddSingleton<MainWindowViewModel>();
+                                                                                                       serviceCollection.AddAboutServices();
+                                                                                                   }
         );
 }

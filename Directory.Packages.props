@@ -7,36 +7,36 @@
     <!-- #region Project Libs -->
     <When Condition="$(MSBuildProjectName.EndsWith('.Core'))">
       <ItemGroup>
-        <PackageVersion Include="EvilBaschdi.Core" Version="2026.2.26.17" />
-        <PackageVersion Include="EvilBaschdi.Core.DependencyInjection" Version="2026.2.10.18" />
+        <PackageVersion Include="EvilBaschdi.Core" Version="2026.3.30.19" />
+        <PackageVersion Include="EvilBaschdi.Core.DependencyInjection" Version="2026.3.12.17" />
       </ItemGroup>
     </When>
     <When Condition="$(MSBuildProjectName.EndsWith('.Avalonia'))">
       <ItemGroup>
-        <PackageVersion Include="EvilBaschdi.Core.Avalonia" Version="2026.3.1.8" />
+        <PackageVersion Include="EvilBaschdi.Core.Avalonia" Version="2026.3.28.12" />
       </ItemGroup>
     </When>
     <When Condition="$(MSBuildProjectName.EndsWith('.Wpf'))">
       <ItemGroup>
-        <PackageVersion Include="EvilBaschdi.Core.Wpf" Version="2026.2.26.17" />
+        <PackageVersion Include="EvilBaschdi.Core.Wpf" Version="2026.3.3.17" />
       </ItemGroup>
     </When>
     <When Condition="$(MSBuildProjectName.EndsWith('.Terminal'))">
       <ItemGroup>
-        <PackageVersion Include="Spectre.Console" Version="0.54.0" />
+        <PackageVersion Include="Spectre.Console" Version="0.55.0" />
       </ItemGroup>
     </When>
     <!-- #endregion Project Libs -->
     <!-- #region Unit Test Libs -->
     <When Condition="$(MSBuildProjectName.EndsWith('.Tests'))">
       <ItemGroup>
-        <PackageVersion Include="coverlet.collector" Version="8.0.0" />
-        <PackageVersion Include="EvilBaschdi.Testing" Version="2026.2.15.10" />
+        <PackageVersion Include="coverlet.collector" Version="8.0.1" />
+        <PackageVersion Include="EvilBaschdi.Testing" Version="2026.3.25.21" />
         <PackageVersion Include="FluentAssertions.Analyzers" Version="0.34.1" />
         <PackageVersion Include="Meziantou.FluentAssertionsAnalyzers" Version="1.0.22" />
         <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.3.0" />
         <PackageVersion Include="NSubstitute.Analyzers.CSharp" Version="1.0.17" />
-        <PackageVersion Include="xunit.v3" Version="3.2.2" />
+        <PackageVersion Include="xunit.v3.mtp-v2" Version="3.2.2" />
         <PackageVersion Include="xunit.analyzers" Version="1.27.0" />
         <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
       </ItemGroup>

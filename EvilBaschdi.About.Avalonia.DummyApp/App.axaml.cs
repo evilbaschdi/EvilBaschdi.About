@@ -1,6 +1,8 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
+using EvilBaschdi.About.Avalonia.DummyApp.ViewModels;
+using EvilBaschdi.Core.Avalonia;
 
 namespace EvilBaschdi.About.Avalonia.DummyApp;
 
@@ -18,7 +20,18 @@ public class App : Application
     {
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
-            desktop.MainWindow = new MainWindow();
+            var mainWindow = new MainWindow
+                             {
+                                 DataContext = ApplicationServices.GetRequiredService<MainWindowViewModel>()
+                             };
+
+            var handleOsDependentTitleBar = ApplicationServices.GetRequiredService<IHandleOsDependentTitleBar>();
+            handleOsDependentTitleBar?.RunFor(mainWindow);
+
+            var applicationLayout = ApplicationServices.GetRequiredService<IApplicationLayout>();
+            applicationLayout?.RunFor((mainWindow, true, false));
+
+            desktop.MainWindow = mainWindow;
         }
 
         base.OnFrameworkInitializationCompleted();

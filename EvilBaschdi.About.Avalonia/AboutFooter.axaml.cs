@@ -1,14 +1,14 @@
 using Avalonia.Controls;
 
-namespace EvilBaschdi.About.Avalonia.DummyApp;
+namespace EvilBaschdi.About.Avalonia;
 
 /// <inheritdoc />
-public partial class MainWindow : Window
+public partial class AboutFooter : UserControl
 {
     /// <summary>
     ///     Constructor
     /// </summary>
-    public MainWindow()
+    public AboutFooter()
     {
         InitializeComponent();
     }

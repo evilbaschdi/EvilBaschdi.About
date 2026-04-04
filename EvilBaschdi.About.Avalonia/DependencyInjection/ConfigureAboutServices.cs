@@ -1,4 +1,5 @@
 ﻿using EvilBaschdi.About.Avalonia.Models;
+using EvilBaschdi.About.Avalonia.Models.Internal;
 using EvilBaschdi.Core.Avalonia;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
@@ -15,6 +16,8 @@ public static class ConfigureAboutServices
 
         services.AddSingleton<IAboutContent, AboutContent>();
         services.AddSingleton<IAboutViewModelExtended, AboutViewModelExtended>();
+
+        services.AddSingleton<IAboutWindowReactiveCommand, AboutWindowReactiveCommand>();
 
         services.TryAddSingleton<IApplicationLayout, ApplicationLayout>();
         services.TryAddSingleton<ICurrentAssembly, CurrentAssembly>();
