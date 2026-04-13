@@ -1,7 +1,7 @@
 using Avalonia;
 using EvilBaschdi.About.Avalonia.DependencyInjection;
 using EvilBaschdi.About.Avalonia.DummyApp.ViewModels;
-using EvilBaschdi.Core.Avalonia;
+using EvilBaschdi.Core.Avalonia.AppBuilderImplementations;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace EvilBaschdi.About.Avalonia.DummyApp;

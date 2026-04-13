@@ -1,12 +1,13 @@
-using Avalonia.Controls;
 using EvilBaschdi.About.Avalonia.Models;
-using EvilBaschdi.Core.Avalonia;
+using EvilBaschdi.Core.Avalonia.Layout;
+using EvilBaschdi.Core.Avalonia.Lifetime;
+using FluentAvalonia.UI.Windowing;
 
 namespace EvilBaschdi.About.Avalonia;
 
 /// <inheritdoc />
 // ReSharper disable once UnusedType.Global
-public partial class AboutWindow : Window
+public partial class AboutWindow : FAAppWindow
 {
     /// <summary>
     ///     Constructor
@@ -26,8 +27,7 @@ public partial class AboutWindow : Window
         handleOsDependentTitleBar.RunFor(this);
         applicationLayout.RunFor((this, true, false));
 
-        var mainWindow = mainWindowByApplicationLifetime.Value;
-        if (mainWindow != null)
+        if (mainWindowByApplicationLifetime.Value is FAAppWindow mainWindow)
         {
             Icon = mainWindow.Icon;
         }

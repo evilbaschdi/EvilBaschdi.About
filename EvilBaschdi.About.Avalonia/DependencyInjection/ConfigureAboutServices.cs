@@ -1,6 +1,8 @@
 ﻿using EvilBaschdi.About.Avalonia.Models;
 using EvilBaschdi.About.Avalonia.Models.Internal;
-using EvilBaschdi.Core.Avalonia;
+using EvilBaschdi.Core.Avalonia.Helpers;
+using EvilBaschdi.Core.Avalonia.Layout;
+using EvilBaschdi.Core.Avalonia.Lifetime;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 

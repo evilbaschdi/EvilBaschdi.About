@@ -1,9 +1,9 @@
-using Avalonia.Controls;
+using FluentAvalonia.UI.Windowing;
 
 namespace EvilBaschdi.About.Avalonia.DummyApp;
 
 /// <inheritdoc />
-public partial class MainWindow : Window
+public partial class MainWindow : FAAppWindow
 {
     /// <summary>
     ///     Constructor

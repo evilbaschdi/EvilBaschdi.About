@@ -1,4 +1,5 @@
-﻿using EvilBaschdi.Core.Avalonia;
+﻿using EvilBaschdi.Core.Avalonia.DependencyInjection;
+using EvilBaschdi.Core.Avalonia.Lifetime;
 using EvilBaschdi.Core.Avalonia.Mvvm.Command;
 
 namespace EvilBaschdi.About.Avalonia.Models.Internal;

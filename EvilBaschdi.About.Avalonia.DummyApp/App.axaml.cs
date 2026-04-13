@@ -2,7 +2,8 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using EvilBaschdi.About.Avalonia.DummyApp.ViewModels;
-using EvilBaschdi.Core.Avalonia;
+using EvilBaschdi.Core.Avalonia.DependencyInjection;
+using EvilBaschdi.Core.Avalonia.Layout;
 
 namespace EvilBaschdi.About.Avalonia.DummyApp;
 
