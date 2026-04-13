@@ -1,5 +1,6 @@
 ﻿using EvilBaschdi.About.Avalonia.Models;
 using EvilBaschdi.About.Avalonia.Models.Internal;
+using EvilBaschdi.Core.Avalonia.Behaviors;
 using EvilBaschdi.Core.Avalonia.Helpers;
 using EvilBaschdi.Core.Avalonia.Layout;
 using EvilBaschdi.Core.Avalonia.Lifetime;
@@ -24,6 +25,7 @@ public static class ConfigureAboutServices
         services.TryAddSingleton<IApplicationLayout, ApplicationLayout>();
         services.TryAddSingleton<ICurrentAssembly, CurrentAssembly>();
         services.TryAddSingleton<IHandleOsDependentTitleBar, HandleOsDependentTitleBar>();
+        services.TryAddSingleton<IWindowOpenedBehavior, WindowOpenedBehavior>();
         services.TryAddSingleton<IMainWindowByApplicationLifetime, MainWindowByApplicationLifetime>();
 
         services.AddTransient<AboutWindow>();
