@@ -12,6 +12,7 @@
 		<Title>EvilBaschdi.Avalonia.DummyApp</Title>
 		<Description>TestUi for EvilBaschdi.About.Avalonia</Description>
 		<Version>$([System.DateTime]::UtcNow.ToString(yyyy.M.d.H))</Version>
+		<AvaloniaUseCompiledBindingsByDefault>false</AvaloniaUseCompiledBindingsByDefault>
 	</PropertyGroup>
 
 	<ItemGroup>
