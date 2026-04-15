@@ -18,10 +18,13 @@ public class AboutViewModelExtended : AboutViewModel, IAboutViewModelExtended
     /// <param name="aboutWindowReactiveCommand"></param>
     /// <exception cref="ArgumentNullException"></exception>
     public AboutViewModelExtended(
-        IAboutContent aboutContent,
-        IAboutWindowReactiveCommand aboutWindowReactiveCommand)
+        [NotNull] IAboutContent aboutContent,
+        [NotNull] IAboutWindowReactiveCommand aboutWindowReactiveCommand)
         : base(aboutContent)
     {
+        ArgumentNullException.ThrowIfNull(aboutContent);
+        ArgumentNullException.ThrowIfNull(aboutWindowReactiveCommand);
+
         _aboutModel = aboutContent.Value;
         AboutWindowCommand = aboutWindowReactiveCommand.Command;
     }
@@ -33,7 +36,7 @@ public class AboutViewModelExtended : AboutViewModel, IAboutViewModelExtended
     /// <summary>
     /// </summary>
     // ReSharper disable UnusedAutoPropertyAccessor.Global
-    public ReactiveCommand<Unit, Unit> AboutWindowCommand { get; set; }
+    public ReactiveCommand<Unit, Unit> AboutWindowCommand { get; private set; }
 
     // ReSharper restore UnusedMember.Global
 }

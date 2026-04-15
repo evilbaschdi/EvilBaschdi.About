@@ -21,6 +21,11 @@ build/
 bld/
 [Bb]in/
 [Oo]bj/
+artifacts/
+packages/
+.nuget/
+*.sln.ide
+*DS_Store
 
 # Visual Studo 2015 cache/options directory
 .vs/
