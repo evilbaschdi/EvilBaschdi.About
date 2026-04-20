@@ -7,8 +7,11 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:DataType="viewModels:AboutViewModelExtended"
              x:Class="EvilBaschdi.About.Avalonia.AboutFooter">
-    <Grid>
-        <controls:FACommandBar Margin="7" HorizontalAlignment="Right" VerticalAlignment="Center">
+    <Grid RowDefinitions="1,45" Margin="0,7,0,0">
+
+        <Separator Grid.Row="0" />
+
+        <controls:FACommandBar Grid.Row="1" Margin="0,7,0,0" HorizontalAlignment="Right" VerticalAlignment="Center">
             <controls:FACommandBar.PrimaryCommands>
                 <controls:FACommandBarElementContainer>
                     <Button VerticalAlignment="Top" HorizontalAlignment="Left" Command="{Binding AboutWindowCommand}" ToolTip.Tip="About">
@@ -19,5 +22,6 @@
                 </controls:FACommandBarElementContainer>
             </controls:FACommandBar.PrimaryCommands>
         </controls:FACommandBar>
+
     </Grid>
 </UserControl>

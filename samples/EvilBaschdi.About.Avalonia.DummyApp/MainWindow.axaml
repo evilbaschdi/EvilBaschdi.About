@@ -24,7 +24,7 @@
 
         <Panel Name="MainPanel" Margin="0,30,0,0">
             <Panel Name="ContentPanel" Margin="0,0,0,0">
-                <Grid Margin="7" RowDefinitions="*,1,46">
+                <Grid Margin="7" RowDefinitions="*,46">
 
                     <Grid Grid.Row="0" Margin="15" RowDefinitions="256,*">
                         <!-- ReSharper disable once UnusedMember.Global -->
@@ -36,9 +36,7 @@
                         </StackPanel>
                     </Grid>
 
-                    <Separator Grid.Row="1" />
-
-                    <avalonia:AboutFooter Grid.Row="2" />
+                    <avalonia:AboutFooter Grid.Row="1" />
 
                     <!--  <controls:CommandBar Grid.Row="2" Margin="7" HorizontalAlignment="Right" VerticalAlignment="Center">
                             <controls:CommandBar.PrimaryCommands>
