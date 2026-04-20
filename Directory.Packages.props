@@ -13,7 +13,7 @@
     </When>
     <When Condition="$(MSBuildProjectName.EndsWith('.Avalonia'))">
       <ItemGroup>
-        <PackageVersion Include="EvilBaschdi.Core.Avalonia" Version="2026.4.13.18-develop" />
+        <PackageVersion Include="EvilBaschdi.Core.Avalonia" Version="2026.4.20.17-develop" />
       </ItemGroup>
     </When>
     <When Condition="$(MSBuildProjectName.EndsWith('.Wpf'))">
@@ -23,14 +23,14 @@
     </When>
     <When Condition="$(MSBuildProjectName.EndsWith('.Terminal'))">
       <ItemGroup>
-        <PackageVersion Include="Spectre.Console" Version="0.55.0" />
+        <PackageVersion Include="Spectre.Console" Version="0.55.2" />
       </ItemGroup>
     </When>
     <!-- #endregion Project Libs -->
     <!-- #region Unit Test Libs -->
     <When Condition="$(MSBuildProjectName.EndsWith('.Tests'))">
       <ItemGroup>
-        <PackageVersion Include="coverlet.collector" Version="8.0.1" />
+        <PackageVersion Include="coverlet.collector" Version="10.0.0" />
         <PackageVersion Include="EvilBaschdi.Testing" Version="2026.4.6.14" />
         <PackageVersion Include="FluentAssertions.Analyzers" Version="0.34.1" />
         <PackageVersion Include="Meziantou.FluentAssertionsAnalyzers" Version="1.0.22" />
