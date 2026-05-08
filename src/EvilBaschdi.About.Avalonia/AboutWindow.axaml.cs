@@ -1,4 +1,6 @@
+using Avalonia.Controls;
 using EvilBaschdi.About.Avalonia.Models;
+using EvilBaschdi.Core.Avalonia.Controls;
 using EvilBaschdi.Core.Avalonia.Lifetime;
 using EvilBaschdi.Core.Avalonia.Themes;
 using FluentAvalonia.UI.Windowing;
@@ -25,6 +27,9 @@ public partial class AboutWindow : FAAppWindow
         if (mainWindowByApplicationLifetime.Value is FAAppWindow mainWindow)
         {
             Icon = mainWindow.Icon;
+            var titleBarControlParent = mainWindow.FindNameScope()?.Find<TitleBarControl>("TitleBarControl");
+            var titleBarControl = this.FindNameScope()?.Find<TitleBarControl>("TitleBarControl");
+            titleBarControl?.Icon = titleBarControlParent?.Icon;
         }
 
         DataContext = aboutViewModel;

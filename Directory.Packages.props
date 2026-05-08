@@ -8,12 +8,12 @@
     <When Condition="$(MSBuildProjectName.EndsWith('.Core'))">
       <ItemGroup>
         <PackageVersion Include="EvilBaschdi.Core" Version="2026.3.30.19" />
-        <PackageVersion Include="EvilBaschdi.Core.DependencyInjection" Version="2026.4.15.17" />
+        <PackageVersion Include="EvilBaschdi.Core.DependencyInjection" Version="2026.4.21.19" />
       </ItemGroup>
     </When>
     <When Condition="$(MSBuildProjectName.EndsWith('.Avalonia'))">
       <ItemGroup>
-        <PackageVersion Include="EvilBaschdi.Core.Avalonia" Version="2026.4.20.18-develop" />
+        <PackageVersion Include="EvilBaschdi.Core.Avalonia" Version="2026.5.8.16-develop" />
       </ItemGroup>
     </When>
     <When Condition="$(MSBuildProjectName.EndsWith('.Wpf'))">
@@ -31,10 +31,10 @@
     <When Condition="$(MSBuildProjectName.EndsWith('.Tests'))">
       <ItemGroup>
         <PackageVersion Include="coverlet.collector" Version="10.0.0" />
-        <PackageVersion Include="EvilBaschdi.Testing" Version="2026.4.6.14" />
+        <PackageVersion Include="EvilBaschdi.Testing" Version="2026.4.28.17" />
         <PackageVersion Include="FluentAssertions.Analyzers" Version="0.34.1" />
         <PackageVersion Include="Meziantou.FluentAssertionsAnalyzers" Version="1.0.22" />
-        <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.4.0" />
+        <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.5.1" />
         <PackageVersion Include="NSubstitute.Analyzers.CSharp" Version="1.0.17" />
         <PackageVersion Include="xunit.v3.mtp-v2" Version="3.2.2" />
         <PackageVersion Include="xunit.analyzers" Version="1.27.0" />

@@ -5,22 +5,16 @@
                        xmlns:avalonia="clr-namespace:EvilBaschdi.About.Avalonia;assembly=EvilBaschdi.About.Avalonia"
                        xmlns:viewModels="clr-namespace:EvilBaschdi.About.Avalonia.DummyApp.ViewModels"
                        xmlns:windowing="clr-namespace:FluentAvalonia.UI.Windowing;assembly=FluentAvalonia"
+                       xmlns:evilBaschdi="clr-namespace:EvilBaschdi.Core.Avalonia.Controls;assembly=EvilBaschdi.Core.Avalonia"
                        mc:Ignorable="d" d:DesignWidth="450" d:DesignHeight="450" Width="450" Height="450"
                        x:Class="EvilBaschdi.About.Avalonia.DummyApp.MainWindow"
                        x:DataType="viewModels:MainWindowViewModel" ShowAsDialog="True"
-                       Icon="/Assets/b.ico" CanResize="False" Title="DummyApp">
+                       CanResize="False" Title="DummyApp">
 
     <Panel Name="RootPanel">
 
-        <Panel Name="TitleBarPanel" Height="30" VerticalAlignment="Top" Margin="0,0,0,0">
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Spacing="8" Margin="8,0">
-                <!-- App Icon -->
-                <Image Source="{Binding Icon, RelativeSource={RelativeSource AncestorType=windowing:FAAppWindow}}"
-                       Width="16" Height="16" VerticalAlignment="Center" />
-                <!-- App Title -->
-                <TextBlock Text="DummyApp" />
-            </StackPanel>
-        </Panel>
+        <!-- ReSharper disable once Xaml.PathError -->
+        <evilBaschdi:TitleBarControl Icon="/Assets/b.ico" Name="TitleBarControl" />
 
         <Panel Name="MainPanel" Margin="0,30,0,0">
             <Panel Name="ContentPanel" Margin="0,0,0,0">
@@ -38,13 +32,6 @@
 
                     <avalonia:AboutFooter Grid.Row="1" />
 
-                    <!--  <controls:CommandBar Grid.Row="2" Margin="7" HorizontalAlignment="Right" VerticalAlignment="Center">
-                            <controls:CommandBar.PrimaryCommands>
-                                <controls:CommandBarElementContainer>
-                                    <Button Content="About" VerticalAlignment="Top" HorizontalAlignment="Left" Click="AboutClick" ToolTip.Tip="About" />
-                                </controls:CommandBarElementContainer>
-                            </controls:CommandBar.PrimaryCommands>
-                        </controls:CommandBar>-->
 
                 </Grid>
             </Panel>

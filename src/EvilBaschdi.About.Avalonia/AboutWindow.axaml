@@ -4,24 +4,15 @@
                        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                        xmlns:about="clr-namespace:EvilBaschdi.About.Avalonia"
                        xmlns:windowing="clr-namespace:FluentAvalonia.UI.Windowing;assembly=FluentAvalonia"
+                       xmlns:evilBaschdi="clr-namespace:EvilBaschdi.Core.Avalonia.Controls;assembly=EvilBaschdi.Core.Avalonia"
                        mc:Ignorable="d" ShowAsDialog="True"
                        x:Class="EvilBaschdi.About.Avalonia.AboutWindow"
-                       CanResize="False"
-                       Title="About"
-                       Height="460"
-                       Width="530">
+                       CanResize="False" Title="About" Height="460" Width="530">
 
     <Panel Name="RootPanel">
 
-        <Panel Name="TitleBarPanel" Height="30" VerticalAlignment="Top" Margin="0,0,0,0">
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Spacing="8" Margin="8,0">
-                <!-- App Icon -->
-                <Image Source="{Binding Icon, RelativeSource={RelativeSource AncestorType=windowing:FAAppWindow}}"
-                       Width="16" Height="16" VerticalAlignment="Center" />
-                <!-- App Title -->
-                <TextBlock Text="About" />
-            </StackPanel>
-        </Panel>
+        <!-- ReSharper disable once Xaml.PathError -->
+        <evilBaschdi:TitleBarControl Name="TitleBarControl" />
 
         <Panel Name="MainPanel" Margin="0,30,0,0">
             <Panel Name="ContentPanel" Margin="0,0,0,0">
