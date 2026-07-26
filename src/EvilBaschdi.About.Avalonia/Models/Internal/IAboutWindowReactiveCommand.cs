@@ -3,4 +3,4 @@
 namespace EvilBaschdi.About.Avalonia.Models.Internal;
 
 /// <inheritdoc />
-public interface IAboutWindowReactiveCommand : IReactiveCommandUnitTask;
+public interface IAboutWindowReactiveCommand : IReactiveCommandRxVoidTask;

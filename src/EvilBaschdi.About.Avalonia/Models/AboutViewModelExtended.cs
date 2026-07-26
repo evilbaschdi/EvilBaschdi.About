@@ -1,7 +1,7 @@
-﻿using System.Reactive;
-using Avalonia.Media.Imaging;
+﻿using Avalonia.Media.Imaging;
 using EvilBaschdi.About.Avalonia.Models.Internal;
 using ReactiveUI;
+using ReactiveUI.Primitives;
 
 namespace EvilBaschdi.About.Avalonia.Models;
 
@@ -36,7 +36,7 @@ public class AboutViewModelExtended : AboutViewModel, IAboutViewModelExtended
     /// <summary>
     /// </summary>
     // ReSharper disable UnusedAutoPropertyAccessor.Global
-    public ReactiveCommand<Unit, Unit> AboutWindowCommand { get; private set; }
+    public ReactiveCommand<RxVoid, RxVoid> AboutWindowCommand { get; private set; }
 
     // ReSharper restore UnusedMember.Global
 }

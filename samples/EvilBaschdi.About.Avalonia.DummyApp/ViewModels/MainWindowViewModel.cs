@@ -1,6 +1,6 @@
-﻿using System.Reactive;
-using EvilBaschdi.About.Avalonia.Models.Internal;
+﻿using EvilBaschdi.About.Avalonia.Models.Internal;
 using ReactiveUI;
+using ReactiveUI.Primitives;
 
 namespace EvilBaschdi.About.Avalonia.DummyApp.ViewModels;
 
@@ -21,5 +21,5 @@ public class MainWindowViewModel
     /// <summary>
     /// </summary>
     // ReSharper disable once UnusedMember.Global
-    public ReactiveCommand<Unit, Unit> AboutWindowCommand { get; set; }
+    public ReactiveCommand<RxVoid, RxVoid> AboutWindowCommand { get; set; }
 }
