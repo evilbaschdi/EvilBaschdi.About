@@ -1,4 +1,4 @@
-﻿using Avalonia.Media.Imaging;
+using Avalonia.Media.Imaging;
 using EvilBaschdi.About.Avalonia.Models.Internal;
 using ReactiveUI;
 using ReactiveUI.Primitives;

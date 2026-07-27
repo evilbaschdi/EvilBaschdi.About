@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using EvilBaschdi.About.Terminal.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 

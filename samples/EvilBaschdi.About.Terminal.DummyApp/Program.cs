@@ -1,4 +1,4 @@
-﻿using EvilBaschdi.About.Terminal;
+using EvilBaschdi.About.Terminal;
 using EvilBaschdi.About.Terminal.DummyApp;
 using Microsoft.Extensions.DependencyInjection;
 

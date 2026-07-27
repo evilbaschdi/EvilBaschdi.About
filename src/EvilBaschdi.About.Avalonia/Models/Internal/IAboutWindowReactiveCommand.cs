@@ -1,4 +1,4 @@
-﻿using EvilBaschdi.Core.Avalonia.Mvvm.Command;
+using EvilBaschdi.Core.Avalonia.Mvvm.Command;
 
 namespace EvilBaschdi.About.Avalonia.Models.Internal;
 

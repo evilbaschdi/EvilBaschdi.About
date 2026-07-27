@@ -1,4 +1,4 @@
-﻿using EvilBaschdi.About.Avalonia.Models;
+using EvilBaschdi.About.Avalonia.Models;
 using EvilBaschdi.About.Avalonia.Models.Internal;
 using EvilBaschdi.Core.Avalonia.Helpers;
 using EvilBaschdi.Core.Avalonia.Lifetime;

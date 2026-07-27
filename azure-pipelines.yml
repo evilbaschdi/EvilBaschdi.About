@@ -21,7 +21,6 @@ extends:
     projects:
       - EvilBaschdi.About.Core
       - EvilBaschdi.About.Avalonia
-      - EvilBaschdi.About.Wpf
       - EvilBaschdi.About.Terminal
     framework: net10.0
     projectsParentDirectory: src/

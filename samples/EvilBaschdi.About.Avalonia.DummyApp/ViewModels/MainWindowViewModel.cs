@@ -1,4 +1,4 @@
-﻿using EvilBaschdi.About.Avalonia.Models.Internal;
+using EvilBaschdi.About.Avalonia.Models.Internal;
 using ReactiveUI;
 using ReactiveUI.Primitives;
 

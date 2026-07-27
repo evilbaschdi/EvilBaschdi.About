@@ -19,27 +19,13 @@
 		<RepositoryUrl>https://github.com/evilbaschdi/EvilBaschdi.About</RepositoryUrl>
 		<IncludeSymbols>True</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<TargetFrameworks>net10.0</TargetFrameworks>
 		<VersionPrefix>$([System.DateTime]::UtcNow.ToString(yyyy.M.d.H))</VersionPrefix>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<None Include="icon.png" Pack="true" Visible="false" PackagePath="" />
 	</ItemGroup>
-
-	<!-- Exact versions have to be set in Directory.Build.Targets -->
-	<Choose>
-		<When Condition="$(MSBuildProjectName.Contains('Wpf'))">
-			<PropertyGroup>
-				<EnableWindowsTargeting>true</EnableWindowsTargeting>
-				<TargetFrameworks>net0.0-windows</TargetFrameworks>
-			</PropertyGroup>
-		</When>
-		<Otherwise>
-			<PropertyGroup>
-				<TargetFrameworks>net0.0</TargetFrameworks>
-			</PropertyGroup>
-		</Otherwise>
-	</Choose>
 
 	<!-- ReSharper disable once UnknownProperty -->
 	<PropertyGroup Condition="$(MSBuildProjectName.EndsWith('.Tests'))">
@@ -79,11 +65,6 @@
 		<When Condition="$(MSBuildProjectName.EndsWith('.Avalonia'))">
 			<ItemGroup>
 				<PackageReference Include="EvilBaschdi.Core.Avalonia" />
-			</ItemGroup>
-		</When>
-		<When Condition="$(MSBuildProjectName.EndsWith('.Wpf'))">
-			<ItemGroup>
-				<PackageReference Include="EvilBaschdi.Core.Wpf" />
 			</ItemGroup>
 		</When>
 		<When Condition="$(MSBuildProjectName.EndsWith('.Terminal'))">

@@ -1,4 +1,4 @@
-﻿using EvilBaschdi.About.Avalonia.Models;
+using EvilBaschdi.About.Avalonia.Models;
 
 namespace EvilBaschdi.About.Avalonia.Tests.Models;
 

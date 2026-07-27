@@ -1,4 +1,4 @@
-﻿namespace EvilBaschdi.About.Terminal;
+namespace EvilBaschdi.About.Terminal;
 
 /// <inheritdoc />
 public interface IWriteAboutTable : IRun;

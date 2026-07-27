@@ -1,4 +1,4 @@
-﻿namespace EvilBaschdi.About.Core.Tests;
+namespace EvilBaschdi.About.Core.Tests;
 
 /// <summary>
 ///     Do not delete this class.

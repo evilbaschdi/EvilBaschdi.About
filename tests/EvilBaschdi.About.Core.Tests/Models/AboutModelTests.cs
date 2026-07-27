@@ -1,4 +1,4 @@
-﻿namespace EvilBaschdi.About.Core.Tests.Models;
+namespace EvilBaschdi.About.Core.Tests.Models;
 
 public class AboutModelTests
 {

@@ -1,4 +1,4 @@
-﻿namespace EvilBaschdi.About.Avalonia.Tests;
+namespace EvilBaschdi.About.Avalonia.Tests;
 
 /// <summary>
 ///     Do not delete this class.

@@ -43,17 +43,6 @@
 | ![myget.org][myGetBadge]       | <https://myget.org/feed/evilbaschdi/package/nuget/evilbaschdi.about.avalonia>  |
 | ![codeberg.org][codebergBadge] | <https://codeberg.org/evilbaschdi/-/packages/nuget/evilbaschdi.about.avalonia> |
 
-#### EvilBaschdi.About.Wpf
-
-| main                                       | develop                                       |
-| :----------------------------------------- | :-------------------------------------------- |
-| ![MyGet Version Core][myGetVersionWpfMain] | ![MyGet Version Core][myGetVersionWpfDevelop] |
-
-|                                | Package Url                                                               |
-| :----------------------------- | :------------------------------------------------------------------------ |
-| ![myget.org][myGetBadge]       | <https://myget.org/feed/evilbaschdi/package/nuget/evilbaschdi.about.wpf>  |
-| ![codeberg.org][codebergBadge] | <https://codeberg.org/evilbaschdi/-/packages/nuget/evilbaschdi.about.wpf> |
-
 #### EvilBaschdi.About.Terminal
 
 | main                                            | develop                                            |
@@ -75,8 +64,6 @@
 [myGetVersionCoreDevelop]: https://img.shields.io/myget/evilbaschdi/vpre/EvilBaschdi.About.Core?style=for-the-badge&label=EvilBaschdi.About.Core
 [myGetVersionAvaloniaMain]: https://img.shields.io/myget/evilbaschdi/v/EvilBaschdi.About.Avalonia?style=for-the-badge&label=EvilBaschdi.About.Avalonia
 [myGetVersionAvaloniaDevelop]: https://img.shields.io/myget/evilbaschdi/vpre/EvilBaschdi.About.Avalonia?style=for-the-badge&label=EvilBaschdi.About.Avalonia
-[myGetVersionWpfMain]: https://img.shields.io/myget/evilbaschdi/v/EvilBaschdi.About.Wpf?style=for-the-badge&label=EvilBaschdi.About.Wpf
-[myGetVersionWpfDevelop]: https://img.shields.io/myget/evilbaschdi/vpre/EvilBaschdi.About.Wpf?style=for-the-badge&label=EvilBaschdi.About.Wpf
 [myGetVersionTerminalMain]: https://img.shields.io/myget/evilbaschdi/v/EvilBaschdi.About.Terminal?style=for-the-badge&label=EvilBaschdi.About.Terminal
 [myGetVersionTerminalDevelop]: https://img.shields.io/myget/evilbaschdi/vpre/EvilBaschdi.About.Terminal?style=for-the-badge&label=EvilBaschdi.About.Terminal
 [codeFactorMainBadge]: https://www.codefactor.io/repository/github/evilbaschdi/evilbaschdi.about/badge/main?style=for-the-badge&

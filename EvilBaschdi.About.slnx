@@ -2,7 +2,6 @@
   <Folder Name="/samples/">
     <Project Path="samples/EvilBaschdi.About.Avalonia.DummyApp/EvilBaschdi.About.Avalonia.DummyApp.csproj" />
     <Project Path="samples/EvilBaschdi.About.Terminal.DummyApp/EvilBaschdi.About.Terminal.DummyApp.csproj" />
-    <Project Path="samples/EvilBaschdi.About.Wpf.DummyApp/EvilBaschdi.About.Wpf.DummyApp.csproj" />
   </Folder>
   <Folder Name="/Solution Items/">
     <File Path=".editorconfig" />
@@ -15,12 +14,10 @@
   <Folder Name="/tests/">
     <Project Path="tests/EvilBaschdi.About.Avalonia.Tests/EvilBaschdi.About.Avalonia.Tests.csproj" />
     <Project Path="tests/EvilBaschdi.About.Core.Tests/EvilBaschdi.About.Core.Tests.csproj" />
-    <Project Path="tests/EvilBaschdi.About.Wpf.Tests/EvilBaschdi.About.Wpf.Tests.csproj" />
   </Folder>
   <Folder Name="/src/">
     <Project Path="src/EvilBaschdi.About.Avalonia/EvilBaschdi.About.Avalonia.csproj" />
     <Project Path="src/EvilBaschdi.About.Core/EvilBaschdi.About.Core.csproj" />
     <Project Path="src/EvilBaschdi.About.Terminal/EvilBaschdi.About.Terminal.csproj" />
-    <Project Path="src/EvilBaschdi.About.Wpf/EvilBaschdi.About.Wpf.csproj" />
   </Folder>
 </Solution>

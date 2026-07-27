@@ -1,4 +1,4 @@
-﻿namespace EvilBaschdi.About.Core.Models;
+namespace EvilBaschdi.About.Core.Models;
 
 /// <summary>
 /// </summary>
