@@ -1,72 +1,101 @@
+<!-- markdownlint-disable MD033 -->
 # EvilBaschdi.About
 
-## Source Code of EvilBaschdi.About
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
+[![Target: .NET 10.0](https://img.shields.io/badge/.NET-10.0-512bd4.svg?style=for-the-badge&logo=dotnet)](Directory.Build.props)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge&)](LICENSE)
+About dialog and application metadata components for .NET applications (Core, Avalonia UI, and Terminal).
 
-### Package Feeds
+---
 
-|                                | Feed Url                                                         |
-| :----------------------------- | :--------------------------------------------------------------- |
-| ![myget.org][myGetBadge]       | <https://www.myget.org/F/evilbaschdi/api/v3/index.json>          |
-| ![codeberg.org][codebergBadge] | <https://codeberg.org/api/packages/evilbaschdi/nuget/index.json> |
+## 📈 Quality & Activity
 
-### Build and Codefactor
+| Branch | Status & Activity |
+| :--- | :--- |
+| ![Main](https://img.shields.io/badge/branch-main-brightgreen?style=flat-square&logo=git&logoColor=white&color=c9ff00) | [![CodeFactor](https://www.codefactor.io/repository/github/evilbaschdi/EvilBaschdi.About/badge/main?style=flat-square)](https://www.codefactor.io/repository/github/evilbaschdi/EvilBaschdi.About/overview/main) ![Commit Activity Main](https://img.shields.io/github/commit-activity/m/evilbaschdi/EvilBaschdi.About/main?style=flat-square) ![Last Commit Main](https://img.shields.io/github/last-commit/evilbaschdi/EvilBaschdi.About/main?style=flat-square) |
+| ![Develop](https://img.shields.io/badge/branch-develop-blue?style=flat-square&logo=git&logoColor=white&color=0080ff) | [![CodeFactor](https://www.codefactor.io/repository/github/evilbaschdi/EvilBaschdi.About/badge/develop?style=flat-square)](https://www.codefactor.io/repository/github/evilbaschdi/EvilBaschdi.About/overview/develop) ![Commit Activity Develop](https://img.shields.io/github/commit-activity/m/evilbaschdi/EvilBaschdi.About/develop?style=flat-square) ![Last Commit Develop](https://img.shields.io/github/last-commit/evilbaschdi/EvilBaschdi.About/develop?style=flat-square) |
 
+---
 
-| main                                                         | develop                                                            |
-| :----------------------------------------------------------- | :----------------------------------------------------------------- |
-| ![evilbaschdi Azure DevOps Build Status][buildStatusMain]    | ![evilbaschdi Azure DevOps Build Status][buildStatusDevelop]       |
-| [![CodeFactor][codeFactorMainBadge]][codeFactorMainOverview] | [![CodeFactor][codeFactorDevelopBadge]][codeFactorDevelopOverview] |
+## 📦 Packages in this Repository
 
-### Packages
+| Package | Description | Sources |
+| :--- | :--- | :--- |
+| [`EvilBaschdi.About.Core`](src/EvilBaschdi.About.Core) | Core models and business logic for About dialogs and application metadata. | [![MyGet](https://img.shields.io/badge/MyGet-gray?style=flat-square&logo=myget)](https://myget.org/feed/evilbaschdi/package/nuget/evilbaschdi.about.core) [![Codeberg](https://img.shields.io/badge/Codeberg-gray?style=flat-square&logo=codeberg)](https://codeberg.org/evilbaschdi/-/packages/nuget/evilbaschdi.about.core) |
+| [`EvilBaschdi.About.Avalonia`](src/EvilBaschdi.About.Avalonia) | Avalonia UI views and view models for the About dialog. | [![MyGet](https://img.shields.io/badge/MyGet-gray?style=flat-square&logo=myget)](https://myget.org/feed/evilbaschdi/package/nuget/evilbaschdi.about.avalonia) [![Codeberg](https://img.shields.io/badge/Codeberg-gray?style=flat-square&logo=codeberg)](https://codeberg.org/evilbaschdi/-/packages/nuget/evilbaschdi.about.avalonia) |
+| [`EvilBaschdi.About.Terminal`](src/EvilBaschdi.About.Terminal) | Spectre.Console terminal views for application metadata and about info. | [![MyGet](https://img.shields.io/badge/MyGet-gray?style=flat-square&logo=myget)](https://myget.org/feed/evilbaschdi/package/nuget/evilbaschdi.about.terminal) [![Codeberg](https://img.shields.io/badge/Codeberg-gray?style=flat-square&logo=codeberg)](https://codeberg.org/evilbaschdi/-/packages/nuget/evilbaschdi.about.terminal) |
 
-#### EvilBaschdi.About.Core
+---
 
-|                    main                     | develop                                        |
-| :-----------------------------------------: | :--------------------------------------------- |
-| ![MyGet Version Core][myGetVersionCoreMain] | ![MyGet Version Core][myGetVersionCoreDevelop] |
+## 🚀 Package Feeds
 
-|                                | Package Url                                                                |
-| :----------------------------- | :------------------------------------------------------------------------- |
-| ![myget.org][myGetBadge]       | <https://myget.org/feed/evilbaschdi/package/nuget/evilbaschdi.about.core>  |
-| ![codeberg.org][codebergBadge] | <https://codeberg.org/evilbaschdi/-/packages/nuget/evilbaschdi.about.core> |
+All packages (Release and Preview builds) are published to **MyGet** and **Codeberg**. You only need to configure **one** of these feeds.
 
-#### EvilBaschdi.About.Avalonia
+| Registry | Feed URL |
+| :--- | :--- |
+| **MyGet** | `https://www.myget.org/F/evilbaschdi/api/v3/index.json` |
+| **Codeberg** | `https://codeberg.org/api/packages/evilbaschdi/nuget/index.json` |
 
-|                      main                       | develop                                            |
-| :---------------------------------------------: | :------------------------------------------------- |
-| ![MyGet Version Core][myGetVersionAvaloniaMain] | ![MyGet Version Core][myGetVersionAvaloniaDevelop] |
+### Add Feed via .NET CLI
 
-|                                | Package Url                                                                    |
-| :----------------------------- | :----------------------------------------------------------------------------- |
-| ![myget.org][myGetBadge]       | <https://myget.org/feed/evilbaschdi/package/nuget/evilbaschdi.about.avalonia>  |
-| ![codeberg.org][codebergBadge] | <https://codeberg.org/evilbaschdi/-/packages/nuget/evilbaschdi.about.avalonia> |
+Choose either MyGet or Codeberg:
 
-#### EvilBaschdi.About.Terminal
+```bash
+# Option A: MyGet (recommended)
+dotnet nuget add source https://www.myget.org/F/evilbaschdi/api/v3/index.json -n "EvilBaschdi MyGet"
 
-| main                                            | develop                                            |
-| :---------------------------------------------- | :------------------------------------------------- |
-| ![MyGet Version Core][myGetVersionTerminalMain] | ![MyGet Version Core][myGetVersionTerminalDevelop] |
+# Option B: Codeberg
+dotnet nuget add source https://codeberg.org/api/packages/evilbaschdi/nuget/index.json -n "EvilBaschdi Codeberg"
+```
 
-|                                | Package Url                                                                    |
-| :----------------------------- | :----------------------------------------------------------------------------- |
-| ![myget.org][myGetBadge]       | <https://myget.org/feed/evilbaschdi/package/nuget/evilbaschdi.about.terminal>  |
-| ![codeberg.org][codebergBadge] | <https://codeberg.org/evilbaschdi/-/packages/nuget/evilbaschdi.about.terminal> |
+<details>
+<summary><b>Sample <code>NuGet.Config</code> with Package Source Mapping</b></summary>
 
-[myGetBadge]: https://img.shields.io/badge/MyGet.org-gray?style=for-the-badge&logo=myget
-[codebergBadge]: https://img.shields.io/badge/Codeberg-gray?style=for-the-badge&logo=codeberg
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <packageSources>
+    <clear />
+    <add key="nuget.org" value="https://api.nuget.org/v3/index.json" />
+    <!-- Choose one of the following feeds: -->
+    <add key="EvilBaschdi MyGet" value="https://www.myget.org/F/evilbaschdi/api/v3/index.json" />
+    <!-- <add key="EvilBaschdi Codeberg" value="https://codeberg.org/api/packages/evilbaschdi/nuget/index.json" /> -->
+  </packageSources>
 
-[buildStatusMain]: https://img.shields.io/azure-devops/build/evilbaschdi/main/24/main?style=for-the-badge
-[buildStatusDevelop]: https://img.shields.io/azure-devops/build/evilbaschdi/main/24/develop?style=for-the-badge
+  <packageSourceMapping>
+    <packageSource key="nuget.org">
+      <package pattern="*" />
+    </packageSource>
+    <packageSource key="EvilBaschdi MyGet">
+      <package pattern="EvilBaschdi.*" />
+    </packageSource>
+    <!-- <packageSource key="EvilBaschdi Codeberg">
+      <package pattern="EvilBaschdi.*" />
+    </packageSource> -->
+  </packageSourceMapping>
+</configuration>
+```
 
-[myGetVersionCoreMain]: https://img.shields.io/myget/evilbaschdi/v/EvilBaschdi.About.Core?style=for-the-badge&label=EvilBaschdi.About.Core
-[myGetVersionCoreDevelop]: https://img.shields.io/myget/evilbaschdi/vpre/EvilBaschdi.About.Core?style=for-the-badge&label=EvilBaschdi.About.Core
-[myGetVersionAvaloniaMain]: https://img.shields.io/myget/evilbaschdi/v/EvilBaschdi.About.Avalonia?style=for-the-badge&label=EvilBaschdi.About.Avalonia
-[myGetVersionAvaloniaDevelop]: https://img.shields.io/myget/evilbaschdi/vpre/EvilBaschdi.About.Avalonia?style=for-the-badge&label=EvilBaschdi.About.Avalonia
-[myGetVersionTerminalMain]: https://img.shields.io/myget/evilbaschdi/v/EvilBaschdi.About.Terminal?style=for-the-badge&label=EvilBaschdi.About.Terminal
-[myGetVersionTerminalDevelop]: https://img.shields.io/myget/evilbaschdi/vpre/EvilBaschdi.About.Terminal?style=for-the-badge&label=EvilBaschdi.About.Terminal
-[codeFactorMainBadge]: https://www.codefactor.io/repository/github/evilbaschdi/evilbaschdi.about/badge/main?style=for-the-badge&
-[codeFactorMainOverview]: https://www.codefactor.io/repository/github/evilbaschdi/evilbaschdi.about/overview/main
-[codeFactorDevelopBadge]: https://www.codefactor.io/repository/github/evilbaschdi/evilbaschdi.about/badge/develop?style=for-the-badge&
-[codeFactorDevelopOverview]: https://www.codefactor.io/repository/github/evilbaschdi/evilbaschdi.about/overview/develop
+</details>
+
+---
+
+## 📥 Installation
+
+Install any package via `dotnet add package`:
+
+### Standard Release
+
+```bash
+dotnet add package EvilBaschdi.About.Core
+dotnet add package EvilBaschdi.About.Avalonia
+dotnet add package EvilBaschdi.About.Terminal
+```
+
+### Preview Builds
+
+```bash
+dotnet add package EvilBaschdi.About.Core --prerelease
+dotnet add package EvilBaschdi.About.Avalonia --prerelease
+dotnet add package EvilBaschdi.About.Terminal --prerelease
+```
