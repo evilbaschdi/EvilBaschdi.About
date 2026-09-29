@@ -66,8 +66,8 @@ Additional usings for test projects:
 - AutoFixture.Idioms
 - AutoFixture.Xunit3
 - EvilBaschdi.Testing
-- FluentAssertions
-- EvilBaschdi.Testing.FluentAssertions.Microsoft.Extensions.DependencyInjection
+- AwesomeAssertions
+- EvilBaschdi.Testing.Assertions.Microsoft.Extensions.DependencyInjection
 - NSubstitute
 - NSubstitute.ReturnsExtensions
 - Xunit
